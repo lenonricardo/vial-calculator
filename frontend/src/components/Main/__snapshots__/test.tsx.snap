@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Main /> should render the heading 1`] = `
+.c0 {
+  background-color: var(--theme-background);
+  width: 100%;
+  height: 100%;
+}
+
+<main
+  class="c0"
+/>
+`;

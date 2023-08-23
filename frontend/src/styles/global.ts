@@ -18,6 +18,18 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
   }
+
+  :root {
+    --theme-background: #E7EAEC;
+    --secondary-operations: rgba(236, 238, 244, 0.5);
+    --theme-primary: #DBE1F2;
+    --theme-secondary: #F2D1DD;
+    --font-primary: #A1A1A1;
+    --font-secondary: #A3A3A3;
+    --font-pads: #CCCADB;
+    --font-pads-secondary: #CCCCCC;
+  }
+
 `
 
 export default GlobalStyles
