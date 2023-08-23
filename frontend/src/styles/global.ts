@@ -28,6 +28,8 @@ const GlobalStyles = createGlobalStyle`
     --font-secondary: #A3A3A3;
     --font-pads: #CCCADB;
     --font-pads-secondary: #CCCCCC;
+    --font-result: #A1A1A1;
+    --font-current: #A3A3A3;
   }
 
 `

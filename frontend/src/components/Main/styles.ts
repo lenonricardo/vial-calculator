@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import BackspaceIcon from '@mui/icons-material/Backspace'
+import HistoryIcon from '@mui/icons-material/History'
 
 export const Wrapper = styled.main`
   background-color: var(--theme-background);
@@ -29,6 +31,10 @@ export const Display = styled.div`
   width: 450px;
   height: 300px;
   border-radius: 1.5rem 1.5rem 0 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
 `
 
 export const BottomButtons = styled.div`
@@ -70,18 +76,6 @@ export const Button = styled.div`
   justify-content: center;
   cursor: pointer;
   user-select: none;
-
-  transition: background 0.8s;
-
-  /* &:hover {
-    background: var(--secondary-operations) radial-gradient(circle, transparent 1%, var(--secondary-operations) 1%) center/15000%;
-  }
-
-  &:active {
-    background-color: var(--secondary-operations);
-    background-size: 100%;
-    transition: background 0s;
-  } */
 `
 
 export const ButtonSecondary = styled(Button)`
@@ -112,4 +106,62 @@ export const ButtonGradient2 = styled(Button)`
   &:last-child {
     border-radius: 0 0 1.5rem 0;
   }
+`
+
+export const MOptions = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
+export const Mbutton = styled.div`
+  width: 112px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: var(--font-pads);
+  border-right: 0.1rem solid var(--font-pads-secondary);
+  margin-bottom: 1rem;
+  cursor: pointer;
+  user-select: none;
+
+  &:last-child {
+    border-right: none;
+  }
+`
+
+export const StyledBackspaceIcon = styled(BackspaceIcon)`
+  font-size: 35px;
+  margin-right: 10px;
+  color: var(--theme-primary);
+  cursor: pointer;
+`
+
+export const Result = styled.div`
+  color: var(--font-result);
+  font-size: 52px;
+  margin-right: 10px;
+`
+
+export const Header = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+`
+
+export const StyledHistoryIcon = styled(HistoryIcon)`
+  font-size: 35px;
+  margin-right: 10px;
+  color: var(--theme-primary);
+  cursor: pointer;
+`
+
+export const Current = styled.div`
+  color: var(--font-current);
+  font-size: 18px;
+  margin-right: 10px;
+  padding-bottom: 60px;
 `

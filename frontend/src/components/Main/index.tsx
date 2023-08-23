@@ -1,9 +1,25 @@
 import * as S from './styles'
 
-const Main = ({}) => (
+const Main = () => (
   <S.Wrapper>
     <S.Calculator>
-      <S.Display></S.Display>
+      <S.Display>
+        <S.Header>
+          <S.StyledHistoryIcon></S.StyledHistoryIcon>
+          <S.Current>100 + 200</S.Current>
+        </S.Header>
+
+        <S.Result>9462</S.Result>
+        <S.StyledBackspaceIcon />
+
+        <S.MOptions>
+          <S.Mbutton>M+</S.Mbutton>
+          <S.Mbutton>M-</S.Mbutton>
+          <S.Mbutton>MR</S.Mbutton>
+          <S.Mbutton>MC</S.Mbutton>
+        </S.MOptions>
+      </S.Display>
+
       <S.PadButtons>
         <S.NumberButtons>
           <S.SecondaryButtons>
@@ -33,7 +49,7 @@ const Main = ({}) => (
           <S.ButtonSecondary>(</S.ButtonSecondary>
           <S.ButtonSecondary>)</S.ButtonSecondary>
           <S.ButtonSecondary>√</S.ButtonSecondary>
-          <S.ButtonSecondary>x²</S.ButtonSecondary>
+          <S.ButtonSecondary>xʸ</S.ButtonSecondary>
         </S.TerciaryButtons>
 
         <S.OperationButtons>
