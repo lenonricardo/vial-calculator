@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react'
 
-import Main from '.'
+import Calculator from '.'
 
-describe('<Main />', () => {
+describe('<Calculator />', () => {
   it('should render the component', () => {
-    const { container } = render(<Main />)
+    const { container } = render(<Calculator />)
 
     expect(container.firstChild).toMatchSnapshot()
   })

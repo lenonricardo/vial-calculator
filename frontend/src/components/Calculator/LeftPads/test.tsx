@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react'
 
-import Main from '.'
+import LeftPads from '.'
 
-describe('<Main />', () => {
+describe('<LeftPads />', () => {
   it('should render the component', () => {
-    const { container } = render(<Main />)
+    const { container } = render(<LeftPads />)
 
     expect(container.firstChild).toMatchSnapshot()
   })

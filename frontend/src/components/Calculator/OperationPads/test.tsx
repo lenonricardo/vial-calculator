@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react'
 
-import Main from '.'
+import OperationPads from '.'
 
-describe('<Main />', () => {
+describe('<OperationPads />', () => {
   it('should render the component', () => {
-    const { container } = render(<Main />)
+    const { container } = render(<OperationPads />)
 
     expect(container.firstChild).toMatchSnapshot()
   })

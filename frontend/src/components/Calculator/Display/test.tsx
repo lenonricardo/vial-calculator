@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react'
 
-import Main from '.'
+import Display from '.'
 
-describe('<Main />', () => {
+describe('<Display />', () => {
   it('should render the component', () => {
-    const { container } = render(<Main />)
+    const { container } = render(<Display />)
 
     expect(container.firstChild).toMatchSnapshot()
   })

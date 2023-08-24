@@ -1,0 +1,456 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Main /> should render the component 1`] = `
+.c2 {
+  width: 450px;
+  height: 300px;
+  border-radius: 1.5rem 1.5rem 0 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c9 {
+  width: 112px;
+  height: 80px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 25px;
+  color: var(--font-pads);
+  border-right: 0.1rem solid var(--font-pads-secondary);
+  margin-bottom: 1rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c9:last-child {
+  border-right: none;
+}
+
+.c7 {
+  font-size: 35px;
+  margin-right: 10px;
+  color: var(--theme-primary);
+  cursor: pointer;
+}
+
+.c6 {
+  color: var(--font-result);
+  font-size: 52px;
+  margin-right: 10px;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+.c4 {
+  font-size: 35px;
+  margin-right: 10px;
+  color: var(--theme-primary);
+  cursor: pointer;
+}
+
+.c5 {
+  color: var(--font-current);
+  font-size: 18px;
+  margin-right: 10px;
+  padding-bottom: 60px;
+}
+
+.c13 {
+  width: 90px;
+  height: 90px;
+  color: var(--font-pads);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 35px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c12 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(90px,1fr));
+  grid-template-rows: repeat(auto-fill,minmax(90px,1fr));
+  width: calc(450px - 90px - 90px);
+  max-height: calc(450px - 90px);
+}
+
+.c14 {
+  background-color: var(--secondary-operations);
+}
+
+.c16 {
+  width: calc(90px + 90px);
+}
+
+.c17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c19 {
+  background: var(--theme-primary);
+  color: #fff !important;
+}
+
+.c18 {
+  background-color: var(--secondary-operations);
+}
+
+.c20 {
+  background: linear-gradient( 180deg, var(--theme-primary) 9%, var(--theme-secondary) 100% );
+  color: #fff;
+}
+
+.c21 {
+  background: var(--theme-secondary);
+  color: #fff !important;
+}
+
+.c21:last-child {
+  border-radius: 0 0 1.5rem 0;
+}
+
+.c1 {
+  width: 450px;
+  height: 750px;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+}
+
+.c10 {
+  width: 450px;
+  height: 450px;
+  border-radius: 0 0 1.5rem 1.5rem;
+  display: -webkit-box;
+  display: -webkit-f;
+  display: -ms-fbox;
+  display: f;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c0 {
+  background-color: var(--theme-background);
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<main
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      <div
+        class="c3"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium c4 css-i4bv87-MuiSvgIcon-root"
+          data-testid="HistoryIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"
+          />
+        </svg>
+        <div
+          class="c5"
+        >
+          100 + 200
+        </div>
+      </div>
+      <div
+        class="c6"
+      >
+        9462
+      </div>
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium c7 css-i4bv87-MuiSvgIcon-root"
+        data-testid="BackspaceIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-3 12.59L17.59 17 14 13.41 10.41 17 9 15.59 12.59 12 9 8.41 10.41 7 14 10.59 17.59 7 19 8.41 15.41 12 19 15.59z"
+        />
+      </svg>
+      <div
+        class="c8"
+      >
+        <div
+          class="c9"
+        >
+          M+
+        </div>
+        <div
+          class="c9"
+        >
+          M-
+        </div>
+        <div
+          class="c9"
+        >
+          MR
+        </div>
+        <div
+          class="c9"
+        >
+          MC
+        </div>
+      </div>
+    </div>
+    <div
+      class="c10"
+    >
+      <div
+        class="c11"
+      >
+        <div
+          class="c12"
+        >
+          <div
+            class="c13 c14"
+          >
+            CE
+          </div>
+          <div
+            class="c13 c14"
+          >
+            C
+          </div>
+          <div
+            class="c13 c14"
+          >
+            +/-
+          </div>
+          <div
+            class="c13"
+          >
+            7
+          </div>
+          <div
+            class="c13"
+          >
+            8
+          </div>
+          <div
+            class="c13"
+          >
+            9
+          </div>
+          <div
+            class="c13"
+          >
+            4
+          </div>
+          <div
+            class="c13"
+          >
+            5
+          </div>
+          <div
+            class="c13"
+          >
+            6
+          </div>
+          <div
+            class="c13"
+          >
+            1
+          </div>
+          <div
+            class="c13"
+          >
+            2
+          </div>
+          <div
+            class="c13"
+          >
+            3
+          </div>
+        </div>
+        <div
+          class="c15"
+        >
+          <div
+            class="c13 c16"
+          >
+            0
+          </div>
+          <div
+            class="c13"
+          >
+            .
+          </div>
+        </div>
+      </div>
+      <div
+        class="c17"
+      >
+        <div
+          class="c13 c18"
+        >
+          %
+        </div>
+        <div
+          class="c13 c18"
+        >
+          (
+        </div>
+        <div
+          class="c13 c18"
+        >
+          )
+        </div>
+        <div
+          class="c13 c18"
+        >
+          √
+        </div>
+        <div
+          class="c13 c18"
+        >
+          xʸ
+        </div>
+      </div>
+      <div
+        class="c17"
+      >
+        <div
+          class="c13 c19"
+        >
+          ÷
+        </div>
+        <div
+          class="c13 c20"
+        >
+          x
+        </div>
+        <div
+          class="c13 c21"
+        >
+          -
+        </div>
+        <div
+          class="c13 c21"
+        >
+          +
+        </div>
+        <div
+          class="c13 c21"
+        >
+          =
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+`;
