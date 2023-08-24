@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<LeftPads /> should render the component 1`] = `
+exports[`<NumberPads /> should render the component 1`] = `
 .c2 {
-  width: 90px;
-  height: 90px;
+  width: var(--pad-width);
+  height: var(--pad-height);
   color: var(--font-pads);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-size: 35px;
+  font-size: var(--default-font-size);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -35,7 +35,7 @@ exports[`<LeftPads /> should render the component 1`] = `
   flex-direction: column;
 }
 
-.c4 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -46,19 +46,18 @@ exports[`<LeftPads /> should render the component 1`] = `
 }
 
 .c1 {
+  -webkit-transform: translateY(var(--pad-width));
+  -ms-transform: translateY(var(--pad-width));
+  transform: translateY(var(--pad-width));
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(90px,1fr));
-  grid-template-rows: repeat(auto-fill,minmax(90px,1fr));
-  width: calc(450px - 90px - 90px);
-  max-height: calc(450px - 90px);
+  grid-template-columns: repeat(auto-fill,minmax(var(--pad-width),1fr));
+  grid-template-rows: repeat(auto-fill,minmax(var(--pad-width),1fr));
+  width: calc(450px - var(--pad-width) - var(--pad-width));
+  max-height: calc(450px - var(--pad-width));
 }
 
-.c3 {
-  background-color: var(--secondary-operations);
-}
-
-.c5 {
-  width: calc(90px + 90px);
+.c4 {
+  width: calc(var(--pad-width) * 2);
 }
 
 <div
@@ -67,21 +66,6 @@ exports[`<LeftPads /> should render the component 1`] = `
   <div
     class="c1"
   >
-    <div
-      class="c2 c3"
-    >
-      CE
-    </div>
-    <div
-      class="c2 c3"
-    >
-      C
-    </div>
-    <div
-      class="c2 c3"
-    >
-      +/-
-    </div>
     <div
       class="c2"
     >
@@ -129,10 +113,10 @@ exports[`<LeftPads /> should render the component 1`] = `
     </div>
   </div>
   <div
-    class="c4"
+    class="c3"
   >
     <div
-      class="c2 c5"
+      class="c2 c4"
     >
       0
     </div>

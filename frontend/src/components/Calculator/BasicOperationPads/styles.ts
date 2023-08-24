@@ -1,17 +1,14 @@
 import styled from 'styled-components'
-import { Pad } from '../LeftPads/styles'
+import { Pad } from '../NumberPads/styles'
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
 `
+
 export const PrimaryPad = styled(Pad)`
   background: var(--theme-primary);
   color: #fff !important;
-`
-
-export const SecondaryPad = styled(Pad)`
-  background-color: var(--secondary-operations);
 `
 
 export const PrimaryGradientPad = styled(Pad)`

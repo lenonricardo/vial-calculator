@@ -2,8 +2,8 @@
 
 exports[`<Main /> should render the component 1`] = `
 .c2 {
-  width: 450px;
-  height: 300px;
+  width: var(--calculator-width);
+  height: var(--calculator-height);
   border-radius: 1.5rem 1.5rem 0 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -22,56 +22,16 @@ exports[`<Main /> should render the component 1`] = `
   flex-direction: column;
 }
 
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.c9 {
-  width: 112px;
-  height: 80px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 25px;
-  color: var(--font-pads);
-  border-right: 0.1rem solid var(--font-pads-secondary);
-  margin-bottom: 1rem;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.c9:last-child {
-  border-right: none;
-}
-
-.c7 {
-  font-size: 35px;
+.c6 {
+  font-size: var(--default-font-size);
   margin-right: 10px;
   color: var(--theme-primary);
   cursor: pointer;
 }
 
-.c6 {
+.c5 {
   color: var(--font-result);
-  font-size: 52px;
+  font-size: var(--result-font-size);
   margin-right: 10px;
 }
 
@@ -92,28 +52,21 @@ exports[`<Main /> should render the component 1`] = `
 }
 
 .c4 {
-  font-size: 35px;
+  font-size: var(--default-font-size);
   margin-right: 10px;
   color: var(--theme-primary);
   cursor: pointer;
 }
 
-.c5 {
-  color: var(--font-current);
-  font-size: 18px;
-  margin-right: 10px;
-  padding-bottom: 60px;
-}
-
-.c13 {
-  width: 90px;
-  height: 90px;
+.c8 {
+  width: var(--pad-width);
+  height: var(--pad-height);
   color: var(--font-pads);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-size: 35px;
+  font-size: var(--default-font-size);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -139,7 +92,7 @@ exports[`<Main /> should render the component 1`] = `
   flex-direction: column;
 }
 
-.c15 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -150,19 +103,18 @@ exports[`<Main /> should render the component 1`] = `
 }
 
 .c12 {
+  -webkit-transform: translateY(var(--pad-width));
+  -ms-transform: translateY(var(--pad-width));
+  transform: translateY(var(--pad-width));
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(90px,1fr));
-  grid-template-rows: repeat(auto-fill,minmax(90px,1fr));
-  width: calc(450px - 90px - 90px);
-  max-height: calc(450px - 90px);
+  grid-template-columns: repeat(auto-fill,minmax(var(--pad-width),1fr));
+  grid-template-rows: repeat(auto-fill,minmax(var(--pad-width),1fr));
+  width: calc(450px - var(--pad-width) - var(--pad-width));
+  max-height: calc(450px - var(--pad-width));
 }
 
 .c14 {
-  background-color: var(--secondary-operations);
-}
-
-.c16 {
-  width: calc(90px + 90px);
+  width: calc(var(--pad-width) * 2);
 }
 
 .c17 {
@@ -175,40 +127,34 @@ exports[`<Main /> should render the component 1`] = `
   flex-direction: column;
 }
 
-.c19 {
+.c18 {
   background: var(--theme-primary);
   color: #fff !important;
 }
 
-.c18 {
-  background-color: var(--secondary-operations);
+.c19 {
+  background: linear-gradient( 180deg, var(--theme-primary) 9%, var(--theme-secondary) 100% );
+  color: #fff !important;
 }
 
 .c20 {
-  background: linear-gradient( 180deg, var(--theme-primary) 9%, var(--theme-secondary) 100% );
-  color: #fff;
-}
-
-.c21 {
   background: var(--theme-secondary);
   color: #fff !important;
 }
 
-.c21:last-child {
+.c20:last-child {
   border-radius: 0 0 1.5rem 0;
 }
 
 .c1 {
-  width: 450px;
-  height: 750px;
+  width: var(--calculator-width);
   background-color: #fff;
   border-radius: 1.5rem;
   box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
 }
 
 .c10 {
-  width: 450px;
-  height: 450px;
+  width: var(--calculator-width);
   border-radius: 0 0 1.5rem 1.5rem;
   display: -webkit-box;
   display: -webkit-f;
@@ -217,6 +163,41 @@ exports[`<Main /> should render the component 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transform: translateY(var(--pad-width));
+  -ms-transform: translateY(var(--pad-width));
+  transform: translateY(var(--pad-width));
+}
+
+.c16 {
+  background-color: var(--secondary-operations);
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-transform: translateY(var(--pad-width));
+  -ms-transform: translateY(var(--pad-width));
+  transform: translateY(var(--pad-width));
+  margin-top: calc(-1 * var(--pad-width));
+}
+
+.c9 {
+  background-color: var(--secondary-operations);
 }
 
 .c0 {
@@ -260,20 +241,15 @@ exports[`<Main /> should render the component 1`] = `
             d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"
           />
         </svg>
-        <div
-          class="c5"
-        >
-          100 + 200
-        </div>
       </div>
       <div
-        class="c6"
+        class="c5"
       >
-        9462
+        0
       </div>
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium c7 css-i4bv87-MuiSvgIcon-root"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium c6 css-i4bv87-MuiSvgIcon-root"
         data-testid="BackspaceIcon"
         focusable="false"
         viewBox="0 0 24 24"
@@ -282,29 +258,29 @@ exports[`<Main /> should render the component 1`] = `
           d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-3 12.59L17.59 17 14 13.41 10.41 17 9 15.59 12.59 12 9 8.41 10.41 7 14 10.59 17.59 7 19 8.41 15.41 12 19 15.59z"
         />
       </svg>
+    </div>
+    <div
+      class="c7"
+    >
       <div
-        class="c8"
+        class="c8 c9"
       >
-        <div
-          class="c9"
-        >
-          M+
-        </div>
-        <div
-          class="c9"
-        >
-          M-
-        </div>
-        <div
-          class="c9"
-        >
-          MR
-        </div>
-        <div
-          class="c9"
-        >
-          MC
-        </div>
+        AC
+      </div>
+      <div
+        class="c8 c9"
+      >
+        √
+      </div>
+      <div
+        class="c8 c9"
+      >
+        xʸ
+      </div>
+      <div
+        class="c8 c9"
+      >
+        %
       </div>
     </div>
     <div
@@ -317,135 +293,115 @@ exports[`<Main /> should render the component 1`] = `
           class="c12"
         >
           <div
-            class="c13 c14"
-          >
-            CE
-          </div>
-          <div
-            class="c13 c14"
-          >
-            C
-          </div>
-          <div
-            class="c13 c14"
-          >
-            +/-
-          </div>
-          <div
-            class="c13"
+            class="c8"
           >
             7
           </div>
           <div
-            class="c13"
+            class="c8"
           >
             8
           </div>
           <div
-            class="c13"
+            class="c8"
           >
             9
           </div>
           <div
-            class="c13"
+            class="c8"
           >
             4
           </div>
           <div
-            class="c13"
+            class="c8"
           >
             5
           </div>
           <div
-            class="c13"
+            class="c8"
           >
             6
           </div>
           <div
-            class="c13"
+            class="c8"
           >
             1
           </div>
           <div
-            class="c13"
+            class="c8"
           >
             2
           </div>
           <div
-            class="c13"
+            class="c8"
           >
             3
           </div>
         </div>
         <div
-          class="c15"
+          class="c13"
         >
           <div
-            class="c13 c16"
+            class="c8 c14"
           >
             0
           </div>
           <div
-            class="c13"
+            class="c8"
           >
             .
           </div>
         </div>
       </div>
       <div
-        class="c17"
+        class="c15"
       >
         <div
-          class="c13 c18"
+          class="c8 c16"
         >
-          %
+          M+
         </div>
         <div
-          class="c13 c18"
+          class="c8 c16"
         >
-          (
+          M-
         </div>
         <div
-          class="c13 c18"
+          class="c8 c16"
         >
-          )
+          MR
         </div>
         <div
-          class="c13 c18"
+          class="c8 c16"
         >
-          √
-        </div>
-        <div
-          class="c13 c18"
-        >
-          xʸ
+          MC
         </div>
       </div>
       <div
         class="c17"
       >
         <div
-          class="c13 c19"
+          class="c8 c18"
         >
-          ÷
+          /
         </div>
         <div
-          class="c13 c20"
+          class="c8 c19"
         >
-          x
+          *
         </div>
         <div
-          class="c13 c21"
+          class="c8 c20"
         >
           -
         </div>
         <div
-          class="c13 c21"
+          class="c8 c20"
         >
           +
         </div>
         <div
-          class="c13 c21"
+          class="c8 c20"
         >
           =
         </div>

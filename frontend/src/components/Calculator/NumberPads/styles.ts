@@ -23,11 +23,16 @@ export const BottomPads = styled.div`
 `
 
 export const Pads = styled.div`
+  transform: translateY(var(--pad-width));
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(90px, 1fr));
-  width: calc(450px - 90px - 90px);
-  max-height: calc(450px - 90px);
+  grid-template-columns: repeat(auto-fill, minmax(var(--pad-width), 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(var(--pad-width), 1fr));
+  width: calc(450px - var(--pad-width) - var(--pad-width));
+  max-height: calc(450px - var(--pad-width));
+`
+export const TopPadWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
 `
 
 export const TopPad = styled(Pad)`

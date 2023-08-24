@@ -31,20 +31,11 @@ const GlobalStyles = createGlobalStyle`
     --font-result: #A1A1A1;
     --font-current: #A3A3A3;
 
-    --calculator-width: 28,125rem;
-    --calculator-height: 46,875rem;
-
-    --pad-height: 28,125rem;
-    --display-height: 18,75rem;
-
+    --calculator-width: 450px;
     --pad-width: 90px;
     --pad-height: 90px;
 
-    --memory-pad-width: 11rem;
-    --memory-pad-height: 5rem;
-
     --memory-pad-font-size: 25px;
-
     --default-font-size: 35px;
     --result-font-size: 52px;
 
