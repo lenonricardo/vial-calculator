@@ -10,6 +10,7 @@ import AdvancedOperationPads from './AdvancedOperationPads'
 const Calculator = () => {
   const [result, setResult] = useState<string>('')
   const [reset, setReset] = useState<boolean>(false)
+  const [memory, setMemory] = useState<number>(0);
 
   const handleInput = (input: string) => {
     if (reset) {
@@ -59,6 +60,39 @@ const Calculator = () => {
     localStorage.setItem('history', updatedHistory);
   }
 
+  const handleMemoryAdd = () => {
+    try {
+      const value = parseFloat(result);
+
+      if (!isNaN(value)) {
+        setMemory(memory + value);
+        setReset(true);
+      }
+    } catch (error) {
+      setResult('Error')
+    }
+  };
+
+  const handleMemorySubtract = () => {
+    try {
+      const value = parseFloat(result);
+      if (!isNaN(value)) {
+        setMemory(memory - value);
+        setReset(true);
+      }
+    } catch (error) {
+      setResult('Error')
+    }
+  };
+
+  const handleMemoryRecall = () => {
+    setResult(memory.toString());
+  };
+
+  const handleMemoryClear = () => {
+    setMemory(0);
+  };
+
   return (
     <Wrapper>
       <Display result={result} onCancelEntry={handleCancelEntry}/>
@@ -67,7 +101,12 @@ const Calculator = () => {
 
       <PadWrapper>
         <NumberPads onInput={handleInput} />
-        <MemoryPads onInput={handleOperationInput} />
+        <MemoryPads
+          onMemoryAdd={handleMemoryAdd}
+          onMemorySubtract={handleMemorySubtract}
+          onMemoryRecall={handleMemoryRecall}
+          onMemoryClear={handleMemoryClear}
+        />
         <BasicOperationPads
           onInput={handleOperationInput}
           onEquals={handleEquals}

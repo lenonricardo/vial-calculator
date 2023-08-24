@@ -1,7 +1,10 @@
 import { MemoryWrapper, SecondaryPad } from './styles'
 
 interface MemoryPadsProps {
-  onInput: (input: string) => void
+  onMemoryAdd: () => void;
+  onMemorySubtract: () => void;
+  onMemoryRecall: () => void;
+  onMemoryClear: () => void;
 }
 
 enum MemoryPadsEnum {
@@ -11,17 +14,35 @@ enum MemoryPadsEnum {
   MEMORY_CLEAR = 'MC'
 }
 
-export default function MemoryPads({ onInput }: MemoryPadsProps) {
+export default function MemoryPads({
+  onMemoryAdd,
+  onMemorySubtract,
+  onMemoryRecall,
+  onMemoryClear,
+}: MemoryPadsProps) {
   const memoryPads: MemoryPadsEnum[] = Object.values(MemoryPadsEnum)
 
   const handleOperationClick = (operation: string) => {
-    onInput(operation)
+    switch(operation) {
+      case MemoryPadsEnum.MEMORY_PLUS:
+        onMemoryAdd()
+        break
+      case MemoryPadsEnum.MEMORY_MINUS:
+        onMemorySubtract()
+        break
+      case MemoryPadsEnum.MEMORY_RECALL:
+        onMemoryRecall()
+        break
+      default:
+        onMemoryClear()
+    }
+
   }
 
   return (
     <MemoryWrapper>
       {memoryPads.map((label) => (
-        <SecondaryPad key={label}>{label}</SecondaryPad>
+        <SecondaryPad key={label} onClick={() => handleOperationClick(label)}>{label}</SecondaryPad>
       ))}
     </MemoryWrapper>
   )
