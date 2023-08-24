@@ -1,17 +1,18 @@
 import styled from 'styled-components'
-import { Pad } from '../LeftPads/styles'
+import { Pad } from '../NumberPads/styles'
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
 `
+
 export const PrimaryPad = styled(Pad)`
   background: var(--theme-primary);
   color: #fff !important;
-`
 
-export const SecondaryPad = styled(Pad)`
-  background-color: var(--secondary-operations);
+  &:hover {
+    background: var(--theme-primary);
+  }
 `
 
 export const PrimaryGradientPad = styled(Pad)`
@@ -29,5 +30,9 @@ export const SecondaryGradientPad = styled(Pad)`
 
   &:last-child {
     border-radius: 0 0 1.5rem 0;
+  }
+
+  &:hover {
+    background: var(--theme-secondary);
   }
 `
