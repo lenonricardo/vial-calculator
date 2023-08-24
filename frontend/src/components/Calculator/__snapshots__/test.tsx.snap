@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Main /> should render the component 1`] = `
-.c2 {
+exports[`<Calculator /> should render the component 1`] = `
+.c1 {
   width: 450px;
   height: 300px;
   border-radius: 1.5rem 1.5rem 0 0;
@@ -22,7 +22,7 @@ exports[`<Main /> should render the component 1`] = `
   flex-direction: column;
 }
 
-.c8 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -32,7 +32,7 @@ exports[`<Main /> should render the component 1`] = `
   flex-direction: row;
 }
 
-.c9 {
+.c8 {
   width: 112px;
   height: 80px;
   display: -webkit-box;
@@ -58,24 +58,24 @@ exports[`<Main /> should render the component 1`] = `
   user-select: none;
 }
 
-.c9:last-child {
+.c8:last-child {
   border-right: none;
 }
 
-.c7 {
+.c6 {
   font-size: 35px;
   margin-right: 10px;
   color: var(--theme-primary);
   cursor: pointer;
 }
 
-.c6 {
+.c5 {
   color: var(--font-result);
   font-size: 52px;
   margin-right: 10px;
 }
 
-.c3 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -91,21 +91,21 @@ exports[`<Main /> should render the component 1`] = `
   padding: 10px;
 }
 
-.c4 {
+.c3 {
   font-size: 35px;
   margin-right: 10px;
   color: var(--theme-primary);
   cursor: pointer;
 }
 
-.c5 {
+.c4 {
   color: var(--font-current);
   font-size: 18px;
   margin-right: 10px;
   padding-bottom: 60px;
 }
 
-.c13 {
+.c12 {
   width: 90px;
   height: 90px;
   color: var(--font-pads);
@@ -129,7 +129,7 @@ exports[`<Main /> should render the component 1`] = `
   user-select: none;
 }
 
-.c11 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -139,7 +139,7 @@ exports[`<Main /> should render the component 1`] = `
   flex-direction: column;
 }
 
-.c15 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -149,7 +149,7 @@ exports[`<Main /> should render the component 1`] = `
   flex-direction: row;
 }
 
-.c12 {
+.c11 {
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(90px,1fr));
   grid-template-rows: repeat(auto-fill,minmax(90px,1fr));
@@ -157,15 +157,15 @@ exports[`<Main /> should render the component 1`] = `
   max-height: calc(450px - 90px);
 }
 
-.c14 {
+.c13 {
   background-color: var(--secondary-operations);
 }
 
-.c16 {
+.c15 {
   width: calc(90px + 90px);
 }
 
-.c17 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -175,30 +175,30 @@ exports[`<Main /> should render the component 1`] = `
   flex-direction: column;
 }
 
-.c19 {
+.c18 {
   background: var(--theme-primary);
   color: #fff !important;
 }
 
-.c18 {
+.c17 {
   background-color: var(--secondary-operations);
 }
 
-.c20 {
+.c19 {
   background: linear-gradient( 180deg, var(--theme-primary) 9%, var(--theme-secondary) 100% );
   color: #fff;
 }
 
-.c21 {
+.c20 {
   background: var(--theme-secondary);
   color: #fff !important;
 }
 
-.c21:last-child {
+.c20:last-child {
   border-radius: 0 0 1.5rem 0;
 }
 
-.c1 {
+.c0 {
   width: 450px;
   height: 750px;
   background-color: #fff;
@@ -206,7 +206,7 @@ exports[`<Main /> should render the component 1`] = `
   box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
 }
 
-.c10 {
+.c9 {
   width: 450px;
   height: 450px;
   border-radius: 0 0 1.5rem 1.5rem;
@@ -219,25 +219,7 @@ exports[`<Main /> should render the component 1`] = `
   flex-direction: row;
 }
 
-.c0 {
-  background-color: var(--theme-background);
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-<main
+<div
   class="c0"
 >
   <div
@@ -246,67 +228,67 @@ exports[`<Main /> should render the component 1`] = `
     <div
       class="c2"
     >
-      <div
-        class="c3"
-      >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium c4 css-i4bv87-MuiSvgIcon-root"
-          data-testid="HistoryIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"
-          />
-        </svg>
-        <div
-          class="c5"
-        >
-          100 + 200
-        </div>
-      </div>
-      <div
-        class="c6"
-      >
-        9462
-      </div>
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium c7 css-i4bv87-MuiSvgIcon-root"
-        data-testid="BackspaceIcon"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium c3 css-i4bv87-MuiSvgIcon-root"
+        data-testid="HistoryIcon"
         focusable="false"
         viewBox="0 0 24 24"
       >
         <path
-          d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-3 12.59L17.59 17 14 13.41 10.41 17 9 15.59 12.59 12 9 8.41 10.41 7 14 10.59 17.59 7 19 8.41 15.41 12 19 15.59z"
+          d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"
         />
       </svg>
       <div
-        class="c8"
+        class="c4"
       >
-        <div
-          class="c9"
-        >
-          M+
-        </div>
-        <div
-          class="c9"
-        >
-          M-
-        </div>
-        <div
-          class="c9"
-        >
-          MR
-        </div>
-        <div
-          class="c9"
-        >
-          MC
-        </div>
+        100 + 200
       </div>
     </div>
+    <div
+      class="c5"
+    >
+      9462
+    </div>
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium c6 css-i4bv87-MuiSvgIcon-root"
+      data-testid="BackspaceIcon"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-3 12.59L17.59 17 14 13.41 10.41 17 9 15.59 12.59 12 9 8.41 10.41 7 14 10.59 17.59 7 19 8.41 15.41 12 19 15.59z"
+      />
+    </svg>
+    <div
+      class="c7"
+    >
+      <div
+        class="c8"
+      >
+        M+
+      </div>
+      <div
+        class="c8"
+      >
+        M-
+      </div>
+      <div
+        class="c8"
+      >
+        MR
+      </div>
+      <div
+        class="c8"
+      >
+        MC
+      </div>
+    </div>
+  </div>
+  <div
+    class="c9"
+  >
     <div
       class="c10"
     >
@@ -314,143 +296,151 @@ exports[`<Main /> should render the component 1`] = `
         class="c11"
       >
         <div
+          class="c12 c13"
+        >
+          CE
+        </div>
+        <div
+          class="c12 c13"
+        >
+          C
+        </div>
+        <div
+          class="c12 c13"
+        >
+          +/-
+        </div>
+        <div
           class="c12"
         >
-          <div
-            class="c13 c14"
-          >
-            CE
-          </div>
-          <div
-            class="c13 c14"
-          >
-            C
-          </div>
-          <div
-            class="c13 c14"
-          >
-            +/-
-          </div>
-          <div
-            class="c13"
-          >
-            7
-          </div>
-          <div
-            class="c13"
-          >
-            8
-          </div>
-          <div
-            class="c13"
-          >
-            9
-          </div>
-          <div
-            class="c13"
-          >
-            4
-          </div>
-          <div
-            class="c13"
-          >
-            5
-          </div>
-          <div
-            class="c13"
-          >
-            6
-          </div>
-          <div
-            class="c13"
-          >
-            1
-          </div>
-          <div
-            class="c13"
-          >
-            2
-          </div>
-          <div
-            class="c13"
-          >
-            3
-          </div>
+          7
         </div>
         <div
-          class="c15"
+          class="c12"
         >
-          <div
-            class="c13 c16"
-          >
-            0
-          </div>
-          <div
-            class="c13"
-          >
-            .
-          </div>
+          8
+        </div>
+        <div
+          class="c12"
+        >
+          9
+        </div>
+        <div
+          class="c12"
+        >
+          4
+        </div>
+        <div
+          class="c12"
+        >
+          5
+        </div>
+        <div
+          class="c12"
+        >
+          6
+        </div>
+        <div
+          class="c12"
+        >
+          1
+        </div>
+        <div
+          class="c12"
+        >
+          2
+        </div>
+        <div
+          class="c12"
+        >
+          3
         </div>
       </div>
       <div
-        class="c17"
+        class="c14"
       >
         <div
-          class="c13 c18"
+          class="c12 c15"
         >
-          %
+          0
         </div>
         <div
-          class="c13 c18"
+          class="c12"
         >
-          (
-        </div>
-        <div
-          class="c13 c18"
-        >
-          )
-        </div>
-        <div
-          class="c13 c18"
-        >
-          √
-        </div>
-        <div
-          class="c13 c18"
-        >
-          xʸ
-        </div>
-      </div>
-      <div
-        class="c17"
-      >
-        <div
-          class="c13 c19"
-        >
-          ÷
-        </div>
-        <div
-          class="c13 c20"
-        >
-          x
-        </div>
-        <div
-          class="c13 c21"
-        >
-          -
-        </div>
-        <div
-          class="c13 c21"
-        >
-          +
-        </div>
-        <div
-          class="c13 c21"
-        >
-          =
+          .
         </div>
       </div>
     </div>
+    <div
+      class="c16"
+    >
+      <div
+        class="c12 c17"
+      >
+        %
+      </div>
+      <div
+        class="c12 c17"
+      >
+        (
+      </div>
+      <div
+        class="c12 c17"
+      >
+        )
+      </div>
+      <div
+        class="c12 c17"
+      >
+        √
+      </div>
+      <div
+        class="c12 c17"
+      >
+        xʸ
+      </div>
+    </div>
+    <div
+      class="c16"
+    >
+      <div
+        class="c12 c18"
+      >
+        ÷
+      </div>
+      <div
+        class="c12 c19"
+      >
+        x
+      </div>
+      <div
+        class="c12 c20"
+      >
+        -
+      </div>
+      <div
+        class="c12 c20"
+      >
+        +
+      </div>
+      <div
+        class="c12 c20"
+      >
+        =
+      </div>
+    </div>
   </div>
-</main>
+</div>
+`;
+
+exports[`<Main /> should render the heading 1`] = `
+.c0 {
+  background-color: var(--theme-background);
+  width: 100%;
+  height: 100%;
+}
+
+<main
+  class="c0"
+/>
 `;

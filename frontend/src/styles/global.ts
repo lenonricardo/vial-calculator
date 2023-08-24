@@ -21,15 +21,33 @@ const GlobalStyles = createGlobalStyle`
 
   :root {
     --theme-background: #E7EAEC;
-    --secondary-operations: rgba(236, 238, 244, 0.5);
     --theme-primary: #DBE1F2;
     --theme-secondary: #F2D1DD;
+    --secondary-operations: rgba(236, 238, 244, 0.5);
     --font-primary: #A1A1A1;
     --font-secondary: #A3A3A3;
     --font-pads: #CCCADB;
     --font-pads-secondary: #CCCCCC;
     --font-result: #A1A1A1;
     --font-current: #A3A3A3;
+
+    --calculator-width: 28,125rem;
+    --calculator-height: 46,875rem;
+
+    --pad-height: 28,125rem;
+    --display-height: 18,75rem;
+
+    --pad-width: 90px;
+    --pad-height: 90px;
+
+    --memory-pad-width: 11rem;
+    --memory-pad-height: 5rem;
+
+    --memory-pad-font-size: 25px;
+
+    --default-font-size: 35px;
+    --result-font-size: 52px;
+
   }
 
 `

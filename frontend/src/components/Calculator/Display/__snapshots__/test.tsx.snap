@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Display /> should render the component 1`] = `
+.c0 {
+  width: 450px;
+  height: 300px;
+  border-radius: 1.5rem 1.5rem 0 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c7 {
+  width: 112px;
+  height: 80px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 25px;
+  color: var(--font-pads);
+  border-right: 0.1rem solid var(--font-pads-secondary);
+  margin-bottom: 1rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c7:last-child {
+  border-right: none;
+}
+
+.c5 {
+  font-size: 35px;
+  margin-right: 10px;
+  color: var(--theme-primary);
+  cursor: pointer;
+}
+
+.c4 {
+  color: var(--font-result);
+  font-size: 52px;
+  margin-right: 10px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+.c2 {
+  font-size: 35px;
+  margin-right: 10px;
+  color: var(--theme-primary);
+  cursor: pointer;
+}
+
+.c3 {
+  color: var(--font-current);
+  font-size: 18px;
+  margin-right: 10px;
+  padding-bottom: 60px;
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium c2 css-i4bv87-MuiSvgIcon-root"
+      data-testid="HistoryIcon"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"
+      />
+    </svg>
+    <div
+      class="c3"
+    >
+      100 + 200
+    </div>
+  </div>
+  <div
+    class="c4"
+  >
+    9462
+  </div>
+  <svg
+    aria-hidden="true"
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium c5 css-i4bv87-MuiSvgIcon-root"
+    data-testid="BackspaceIcon"
+    focusable="false"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-3 12.59L17.59 17 14 13.41 10.41 17 9 15.59 12.59 12 9 8.41 10.41 7 14 10.59 17.59 7 19 8.41 15.41 12 19 15.59z"
+    />
+  </svg>
+  <div
+    class="c6"
+  >
+    <div
+      class="c7"
+    >
+      M+
+    </div>
+    <div
+      class="c7"
+    >
+      M-
+    </div>
+    <div
+      class="c7"
+    >
+      MR
+    </div>
+    <div
+      class="c7"
+    >
+      MC
+    </div>
+  </div>
+</div>
+`;
