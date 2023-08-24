@@ -1,3 +1,3 @@
 export default interface OperationProps {
-  onInput: (input: string) => void;
+  onInput: (input: string) => void
 }

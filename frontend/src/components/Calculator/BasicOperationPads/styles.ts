@@ -9,6 +9,10 @@ export const Wrapper = styled.div`
 export const PrimaryPad = styled(Pad)`
   background: var(--theme-primary);
   color: #fff !important;
+
+  &:hover {
+    background: var(--theme-primary);
+  }
 `
 
 export const PrimaryGradientPad = styled(Pad)`
@@ -26,5 +30,9 @@ export const SecondaryGradientPad = styled(Pad)`
 
   &:last-child {
     border-radius: 0 0 1.5rem 0;
+  }
+
+  &:hover {
+    background: var(--theme-secondary);
   }
 `

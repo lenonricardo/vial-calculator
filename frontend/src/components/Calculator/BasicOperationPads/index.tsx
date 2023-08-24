@@ -1,4 +1,4 @@
-import OperationProps from 'interfaces/OperationProps';
+import OperationProps from 'interfaces/OperationProps'
 import {
   Wrapper,
   PrimaryPad,
@@ -7,7 +7,7 @@ import {
 } from './styles'
 
 interface BasicOperationProps extends OperationProps {
-  onEquals: () => void;
+  onEquals: () => void
 }
 
 enum BasicOperationsEnum {

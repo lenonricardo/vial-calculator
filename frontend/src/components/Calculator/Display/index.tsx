@@ -6,12 +6,12 @@ import {
   CustomBackspaceIcon
 } from './styles'
 
-interface DisplayProps  {
-  result: string,
+interface DisplayProps {
+  result: string
   onCancelEntry: () => void
 }
 
-export default function Display({ result, onCancelEntry}: DisplayProps) {
+export default function Display({ result, onCancelEntry }: DisplayProps) {
   return (
     <Wrapper>
       <Header>

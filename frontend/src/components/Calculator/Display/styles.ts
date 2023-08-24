@@ -4,7 +4,6 @@ import HistoryIcon from '@mui/icons-material/History'
 
 export const Wrapper = styled.div`
   width: var(--calculator-width);
-  height: var(--calculator-height);
   border-radius: 1.5rem 1.5rem 0 0;
   display: flex;
   align-items: flex-end;
@@ -23,6 +22,10 @@ export const Result = styled.div`
   color: var(--font-result);
   font-size: var(--result-font-size);
   margin-right: 10px;
+  white-space: nowrap;
+  overflow-x: auto;
+  width: 430px;
+  text-align: right;
 `
 
 export const Header = styled.div`

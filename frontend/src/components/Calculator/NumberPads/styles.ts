@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import Button from '@mui/material/Button'
 
-export const Pad = styled.div`
+export const Pad = styled(Button)`
   width: var(--pad-width);
   height: var(--pad-height);
   color: var(--font-pads);
@@ -10,6 +11,11 @@ export const Pad = styled.div`
   justify-content: center;
   cursor: pointer;
   user-select: none;
+  border-radius: 0;
+
+  &:hover {
+    background-color: #fff;
+  }
 `
 
 export const PadWrapper = styled.div`
@@ -30,14 +36,6 @@ export const Pads = styled.div`
   grid-template-rows: repeat(auto-fill, minmax(var(--pad-width), 1fr));
   width: calc(450px - var(--pad-width) - var(--pad-width));
   max-height: calc(450px - var(--pad-width));
-`
-export const TopPadWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-`
-
-export const TopPad = styled(Pad)`
-  background-color: var(--secondary-operations);
 `
 
 export const DoublePad = styled(Pad)`

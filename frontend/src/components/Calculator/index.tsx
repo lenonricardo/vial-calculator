@@ -17,7 +17,7 @@ const Calculator = () => {
       setReset(false)
     }
 
-    setResult((prevExpression) => prevExpression + input)
+    updateResult(input)
   }
 
   const handleReset = (reset: boolean) => {
@@ -25,7 +25,19 @@ const Calculator = () => {
   }
 
   const handleOperationInput = (input: string) => {
-    setResult((prevExpression) => prevExpression + input)
+    updateResult(input)
+    setReset(false)
+  }
+
+  const updateResult = (input: string) => {
+    const notAllowConsecutiveOperator =
+      /^(?:(?!(\+{2}|-{2}|\*{2}|\/{2}|\.{2})).)*$/
+
+    const isValid = notAllowConsecutiveOperator.test(result + input)
+
+    if (isValid) {
+      setResult((prevResult) => prevResult + input)
+    }
   }
 
   const handleClear = () => {
@@ -33,40 +45,45 @@ const Calculator = () => {
   }
 
   const handleCancelEntry = () => {
-    setResult((prevExpression) => prevExpression.slice(0, -1))
+    setResult((prevResult) => prevResult.slice(0, -1))
   }
 
   const handleEquals = () => {
     try {
-      const evaluatedResult = evaluate(result)
-      saveHistory()
+      const value = result.includes('(') ? result + ')' : result
+
+      const evaluatedResult = evaluate(value)
+      saveHistory(evaluatedResult)
       setResult(evaluatedResult.toString())
+
       setReset(true)
     } catch (error) {
       setResult(result)
     }
   }
 
-  const saveHistory = () => {
-    const storedHistory: string|null = localStorage.getItem('history');
+  const saveHistory = (evaluatedResult: string) => {
+    const storedHistory: string | null = localStorage.getItem('history')
 
-    let history = [];
+    let history: object[] = []
 
     if (storedHistory) {
-      history = JSON.parse(storedHistory);
+      history = JSON.parse(storedHistory)
     }
 
-    history.push(result)
+    history.push({
+      total: evaluatedResult,
+      expression: result
+    })
 
-    const updatedHistory = JSON.stringify(history);
+    const updatedHistory = JSON.stringify(history)
 
-    localStorage.setItem('history', updatedHistory);
+    localStorage.setItem('history', updatedHistory)
   }
-
 
   return (
     <Wrapper>
-      <Display result={result} onCancelEntry={handleCancelEntry}/>
+      <Display result={result} onCancelEntry={handleCancelEntry} />
 
       <AdvancedOperationPads onInput={handleInput} onClear={handleClear} />
 

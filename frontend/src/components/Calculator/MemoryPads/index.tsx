@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { MemoryWrapper, SecondaryPad } from './styles'
 
 interface MemoryPadsProps {
-  result: string,
-  onResultChange: (result: string) => void;
-  onReset: (reset: boolean) => void;
+  result: string
+  onResultChange: (result: string) => void
+  onReset: (reset: boolean) => void
 }
 
 enum MemoryPadsEnum {
@@ -17,46 +17,46 @@ enum MemoryPadsEnum {
 export default function MemoryPads({
   result,
   onResultChange,
-  onReset,
+  onReset
 }: MemoryPadsProps) {
   const memoryPads: MemoryPadsEnum[] = Object.values(MemoryPadsEnum)
-  const [memory, setMemory] = useState<number>(0);
+  const [memory, setMemory] = useState<number>(0)
 
   const handleMemoryAdd = () => {
     try {
-      const value = parseFloat(result);
+      const value = parseFloat(result)
 
       if (!isNaN(value)) {
-        setMemory(memory + value);
-        onReset(true);
+        setMemory(memory + value)
+        onReset(true)
       }
     } catch (error) {
       onResultChange('Error')
     }
-  };
+  }
 
   const handleMemorySubtract = () => {
     try {
-      const value = parseFloat(result);
+      const value = parseFloat(result)
       if (!isNaN(value)) {
-        setMemory(memory - value);
-        onReset(true);
+        setMemory(memory - value)
+        onReset(true)
       }
     } catch (error) {
       onResultChange('Error')
     }
-  };
+  }
 
   const handleMemoryRecall = () => {
-    onResultChange(memory.toString());
-  };
+    onResultChange(memory.toString())
+  }
 
   const handleMemoryClear = () => {
-    setMemory(0);
-  };
+    setMemory(0)
+  }
 
   const handleOperationClick = (operation: string) => {
-    switch(operation) {
+    switch (operation) {
       case MemoryPadsEnum.MEMORY_PLUS:
         handleMemoryAdd()
         break
@@ -69,13 +69,14 @@ export default function MemoryPads({
       default:
         handleMemoryClear()
     }
-
   }
 
   return (
     <MemoryWrapper>
       {memoryPads.map((label) => (
-        <SecondaryPad key={label} onClick={() => handleOperationClick(label)}>{label}</SecondaryPad>
+        <SecondaryPad key={label} onClick={() => handleOperationClick(label)}>
+          {label}
+        </SecondaryPad>
       ))}
     </MemoryWrapper>
   )

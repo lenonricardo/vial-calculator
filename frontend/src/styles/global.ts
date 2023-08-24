@@ -32,6 +32,7 @@ const GlobalStyles = createGlobalStyle`
     --font-current: #A3A3A3;
 
     --calculator-width: 450px;
+    --calculator-height: 609px;
     --pad-width: 90px;
     --pad-height: 90px;
 
