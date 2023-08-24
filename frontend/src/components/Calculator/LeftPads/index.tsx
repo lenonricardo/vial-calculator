@@ -1,28 +1,48 @@
 import { PadWrapper, TopPad, Pads, BottomPads, DoublePad, Pad } from './styles'
 
-const LeftPads = () => (
-  <PadWrapper>
-    <Pads>
-      <TopPad>CE</TopPad>
-      <TopPad>C</TopPad>
-      <TopPad>+/-</TopPad>
+enum TopPadEnum {
+  CE = 'CE',
+  C = 'C',
+  CHANGE_SIGN = '+/-'
+}
 
-      <Pad>7</Pad>
-      <Pad>8</Pad>
-      <Pad>9</Pad>
-      <Pad>4</Pad>
-      <Pad>5</Pad>
-      <Pad>6</Pad>
-      <Pad>1</Pad>
-      <Pad>2</Pad>
-      <Pad>3</Pad>
-    </Pads>
+enum NumberPadEnum {
+  SEVEN = '7',
+  EIGHT = '8',
+  NINE = '9',
+  FOUR = '4',
+  FIVE = '5',
+  SIX = '6',
+  ONE = '1',
+  TWO = '2',
+  THREE = '3'
+}
 
-    <BottomPads>
-      <DoublePad>0</DoublePad>
-      <Pad>.</Pad>
-    </BottomPads>
-  </PadWrapper>
-)
+enum BottomPadEnum {
+  ZERO = '0',
+  DECIMAL_POINT = '.'
+}
 
-export default LeftPads
+export default function LeftPads() {
+  const topPads: TopPadEnum[] = Object.values(TopPadEnum)
+  const numberPads: NumberPadEnum[] = Object.values(NumberPadEnum)
+
+  return (
+    <PadWrapper>
+      <Pads>
+        {topPads.map((label) => (
+          <TopPad key={label}>{label}</TopPad>
+        ))}
+
+        {numberPads.map((label) => (
+          <Pad key={label}>{label}</Pad>
+        ))}
+      </Pads>
+
+      <BottomPads>
+        <DoublePad>{BottomPadEnum.ZERO}</DoublePad>
+        <Pad>{BottomPadEnum.DECIMAL_POINT}</Pad>
+      </BottomPads>
+    </PadWrapper>
+  )
+}

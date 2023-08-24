@@ -20,7 +20,7 @@ export const PrimaryGradientPad = styled(Pad)`
     var(--theme-primary) 9%,
     var(--theme-secondary) 100%
   );
-  color: #fff;
+  color: #fff !important;
 `
 
 export const SecondaryGradientPad = styled(Pad)`

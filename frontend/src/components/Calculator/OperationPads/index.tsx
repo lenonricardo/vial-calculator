@@ -6,24 +6,50 @@ import {
   SecondaryGradientPad
 } from './styles'
 
-const OperationPads = () => (
-  <>
-    <Wrapper>
-      <SecondaryPad>%</SecondaryPad>
-      <SecondaryPad>(</SecondaryPad>
-      <SecondaryPad>)</SecondaryPad>
-      <SecondaryPad>√</SecondaryPad>
-      <SecondaryPad>xʸ</SecondaryPad>
-    </Wrapper>
+enum AdvancedOperationEnum {
+  PERCENTAGE = '%',
+  PARENTHESIS_LEFT = '(',
+  PARENTHESIS_RIGHT = ')',
+  ROOT = '√',
+  EXPONENTIATION = 'xʸ'
+}
 
-    <Wrapper>
-      <PrimaryPad>÷</PrimaryPad>
-      <PrimaryGradientPad>x</PrimaryGradientPad>
-      <SecondaryGradientPad>-</SecondaryGradientPad>
-      <SecondaryGradientPad>+</SecondaryGradientPad>
-      <SecondaryGradientPad>=</SecondaryGradientPad>
-    </Wrapper>
-  </>
-)
+enum BasicOperationsEnum {
+  DIVISION = '/',
+  MULTIPLICATION = '*',
+  SUBTRACTION = '-',
+  ADDITION = '+',
+  EQUALS = '='
+}
 
-export default OperationPads
+export default function OperationPads() {
+  const advancedOperationPads: AdvancedOperationEnum[] = Object.values(
+    AdvancedOperationEnum
+  )
+
+  return (
+    <>
+      <Wrapper>
+        {advancedOperationPads.map((label) => (
+          <SecondaryPad key={label}>{label}</SecondaryPad>
+        ))}
+      </Wrapper>
+
+      <Wrapper>
+        <PrimaryPad>{BasicOperationsEnum.DIVISION}</PrimaryPad>
+        <PrimaryGradientPad>
+          {BasicOperationsEnum.MULTIPLICATION}
+        </PrimaryGradientPad>
+        <SecondaryGradientPad>
+          {BasicOperationsEnum.SUBTRACTION}
+        </SecondaryGradientPad>
+        <SecondaryGradientPad>
+          {BasicOperationsEnum.ADDITION}
+        </SecondaryGradientPad>
+        <SecondaryGradientPad>
+          {BasicOperationsEnum.EQUALS}
+        </SecondaryGradientPad>
+      </Wrapper>
+    </>
+  )
+}

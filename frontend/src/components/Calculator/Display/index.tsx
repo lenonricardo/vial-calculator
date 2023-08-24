@@ -9,23 +9,31 @@ import {
   MemoryPad
 } from './styles'
 
-const Display = () => (
-  <Wrapper>
-    <Header>
-      <CustomHistoryIcon></CustomHistoryIcon>
-      <CurrentOperation>100 + 200</CurrentOperation>
-    </Header>
+enum MemoryPadEnum {
+  ADD = 'M+',
+  SUBTRACT = 'M-',
+  RECALL = 'MR',
+  CLEAR = 'MC'
+}
 
-    <Result>9462</Result>
-    <CustomBackspaceIcon />
+export default function Display() {
+  const memoryPads: MemoryPadEnum[] = Object.values(MemoryPadEnum)
 
-    <MemoryWrapper>
-      <MemoryPad>M+</MemoryPad>
-      <MemoryPad>M-</MemoryPad>
-      <MemoryPad>MR</MemoryPad>
-      <MemoryPad>MC</MemoryPad>
-    </MemoryWrapper>
-  </Wrapper>
-)
+  return (
+    <Wrapper>
+      <Header>
+        <CustomHistoryIcon></CustomHistoryIcon>
+        <CurrentOperation>100 + 200</CurrentOperation>
+      </Header>
 
-export default Display
+      <Result>9462</Result>
+      <CustomBackspaceIcon />
+
+      <MemoryWrapper>
+        {memoryPads.map((label) => (
+          <MemoryPad key={label}>{label}</MemoryPad>
+        ))}
+      </MemoryWrapper>
+    </Wrapper>
+  )
+}
