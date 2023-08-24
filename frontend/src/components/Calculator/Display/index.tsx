@@ -9,13 +9,18 @@ import {
 interface DisplayProps {
   result: string
   onCancelEntry: () => void
+  onShowHistory: () => void
 }
 
-export default function Display({ result, onCancelEntry }: DisplayProps) {
+export default function Display({
+  result,
+  onCancelEntry,
+  onShowHistory
+}: DisplayProps) {
   return (
     <Wrapper>
       <Header>
-        <CustomHistoryIcon></CustomHistoryIcon>
+        <CustomHistoryIcon onClick={() => onShowHistory()}></CustomHistoryIcon>
       </Header>
 
       <Result>{result || 0}</Result>
