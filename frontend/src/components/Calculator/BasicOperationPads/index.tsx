@@ -1,3 +1,4 @@
+import OperationProps from 'interfaces/OperationProps';
 import {
   Wrapper,
   PrimaryPad,
@@ -5,9 +6,8 @@ import {
   SecondaryGradientPad
 } from './styles'
 
-interface OperationPadsProps {
-  onInput: (input: string) => void
-  onEquals: () => void
+interface BasicOperationProps extends OperationProps {
+  onEquals: () => void;
 }
 
 enum BasicOperationsEnum {
@@ -21,7 +21,7 @@ enum BasicOperationsEnum {
 export default function OperationPads({
   onInput,
   onEquals
-}: OperationPadsProps) {
+}: BasicOperationProps) {
   const handleOperationClick = (operation: string) => {
     onInput(operation)
   }

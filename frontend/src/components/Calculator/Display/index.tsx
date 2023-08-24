@@ -6,19 +6,20 @@ import {
   CustomBackspaceIcon
 } from './styles'
 
-type DisplayProps = {
-  result: string
+interface DisplayProps  {
+  result: string,
+  onCancelEntry: () => void
 }
 
-export default function Display(props: DisplayProps) {
+export default function Display({ result, onCancelEntry}: DisplayProps) {
   return (
     <Wrapper>
       <Header>
         <CustomHistoryIcon></CustomHistoryIcon>
       </Header>
 
-      <Result>{props.result || 0}</Result>
-      <CustomBackspaceIcon />
+      <Result>{result || 0}</Result>
+      <CustomBackspaceIcon onClick={() => onCancelEntry()} />
     </Wrapper>
   )
 }

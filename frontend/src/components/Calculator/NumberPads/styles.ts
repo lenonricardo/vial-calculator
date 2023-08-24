@@ -20,6 +20,7 @@ export const PadWrapper = styled.div`
 export const BottomPads = styled.div`
   display: flex;
   flex-direction: row;
+  z-index: 2;
 `
 
 export const Pads = styled.div`

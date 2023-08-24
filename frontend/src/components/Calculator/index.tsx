@@ -8,27 +8,23 @@ import MemoryPads from './MemoryPads'
 import AdvancedOperationPads from './AdvancedOperationPads'
 
 const Calculator = () => {
-  const [expression, setExpression] = useState<string>('')
   const [result, setResult] = useState<string>('')
+  const [reset, setReset] = useState<boolean>(false)
 
   const handleInput = (input: string) => {
-    setResult((prevExpression) => prevExpression + input)
+    if (reset) {
+      setResult('')
+      setReset(false)
+    }
 
-    // if (result.includes('+')) {
-    //   const evaluatedResult = evaluate(result);
-    //   setExpression(evaluatedResult)
-    // }
+    setResult((prevExpression) => prevExpression + input)
   }
 
   const handleOperationInput = (input: string) => {
     setResult((prevExpression) => prevExpression + input)
-
-    // const evaluatedResult = evaluate(result);
-    // setExpression(evaluatedResult)
   }
 
   const handleClear = () => {
-    setExpression('')
     setResult('')
   }
 
@@ -39,18 +35,35 @@ const Calculator = () => {
   const handleEquals = () => {
     try {
       const evaluatedResult = evaluate(result)
+      saveHistory()
       setResult(evaluatedResult.toString())
-      setExpression('')
+      setReset(true)
     } catch (error) {
-      setResult('Error')
+      setResult(result)
     }
+  }
+
+  const saveHistory = () => {
+    const storedHistory: string|null = localStorage.getItem('history');
+
+    let history = [];
+
+    if (storedHistory) {
+      history = JSON.parse(storedHistory);
+    }
+
+    history.push(result)
+
+    const updatedHistory = JSON.stringify(history);
+
+    localStorage.setItem('history', updatedHistory);
   }
 
   return (
     <Wrapper>
-      <Display result={result} />
+      <Display result={result} onCancelEntry={handleCancelEntry}/>
 
-      <AdvancedOperationPads onInput={handleInput} />
+      <AdvancedOperationPads onInput={handleInput} onClear={handleClear} />
 
       <PadWrapper>
         <NumberPads onInput={handleInput} />

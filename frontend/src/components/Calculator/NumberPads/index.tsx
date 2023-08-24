@@ -1,8 +1,5 @@
+import OperationProps from 'interfaces/OperationProps'
 import { PadWrapper, Pads, BottomPads, DoublePad, Pad } from './styles'
-
-interface NumberPadsProps {
-  onInput: (input: string) => void
-}
 
 enum NumberPadEnum {
   SEVEN = '7',
@@ -21,7 +18,7 @@ enum BottomPadEnum {
   DECIMAL_POINT = '.'
 }
 
-export default function NumberPads({ onInput }: NumberPadsProps) {
+export default function NumberPads({ onInput }: OperationProps) {
   const numberPads: NumberPadEnum[] = Object.values(NumberPadEnum)
 
   const handleNumberClick = (number: string) => {

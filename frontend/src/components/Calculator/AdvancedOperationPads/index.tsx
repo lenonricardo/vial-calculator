@@ -1,8 +1,5 @@
+import OperationProps from 'interfaces/OperationProps'
 import { TopPadWrapper, TopPad } from './styles'
-
-interface OperationPadsProps {
-  onInput: (input: string) => void
-}
 
 enum AdvancedOperationEnum {
   ALL_CLEAR = 'AC',
@@ -11,13 +8,21 @@ enum AdvancedOperationEnum {
   PERCENTAGE = '%'
 }
 
-export default function AdvancedOperationPads({ onInput }: OperationPadsProps) {
+interface AdvancedOperationsProps extends OperationProps {
+  onClear: () => void;
+}
+
+export default function AdvancedOperationPads({ onInput, onClear }: AdvancedOperationsProps) {
   const advancedOperationPads: AdvancedOperationEnum[] = Object.values(
     AdvancedOperationEnum
   )
 
   const handleOperationClick = (operation: string) => {
-    onInput(operation)
+    if (operation === AdvancedOperationEnum.ALL_CLEAR) {
+      onClear()
+    } else {
+      onInput(operation)
+    }
   }
 
   return (
