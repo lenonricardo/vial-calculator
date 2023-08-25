@@ -22,23 +22,20 @@ const GlobalStyles = createGlobalStyle`
 
   :root {
     --theme-background: #E7EAEC;
-    --theme-primary: #DBE1F2;
-    --theme-secondary: #F2D1DD;
+    --theme-primary: #F2D1DD;
+    --theme-secondary: #DBE1F2;
     --secondary-operations: rgba(236, 238, 244, 0.5);
-    --font-primary: #A1A1A1;
-    --font-secondary: #A3A3A3;
-    --font-pads: #CCCADB;
-    --font-pads-secondary: #CCCCCC;
-    --font-result: #A1A1A1;
-    --font-current: #A3A3A3;
 
-    --calculator-width: 450px;
-    --calculator-height: 609px;
+    --font-primary-color: #A1A1A1;
+    --font-pads-color: #CCCADB;
+
+    --primary-width: 450px;
     --pad-width: 90px;
     --pad-height: 90px;
+    --navbar-height: 53px;
 
-    --memory-pad-font-size: 18px;
     --default-font-size: 35px;
+    --seconrady-font-size: 18px;
     --result-font-size: 52px;
 
   }

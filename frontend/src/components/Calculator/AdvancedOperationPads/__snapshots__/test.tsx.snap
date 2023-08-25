@@ -4,7 +4,7 @@ exports[`<AdvancedOperationPads /> should render the component 1`] = `
 .c1.c1 {
   width: var(--pad-width);
   height: var(--pad-height);
-  color: var(--font-pads);
+  color: var(--font-pads-color);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

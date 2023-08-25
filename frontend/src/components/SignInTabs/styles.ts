@@ -9,7 +9,7 @@ export const Wrapper = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -53px;
+  margin-top: calc(-1 * var(--navbar-height));
 `
 
 export const TabsRoot = styled(Tabs.Root)`
@@ -36,15 +36,15 @@ export const TabsTrigger = styled(Tabs.Trigger)`
   justify-content: center;
   font-size: 15px;
   line-height: 1;
-  color: var(--font-primary);
+  color: var(--font-primary-color);
   user-select: none;
   border: none;
   cursor: pointer;
-  border-bottom: 1px var(--theme-primary) solid;
+  border-bottom: 1px var(--theme-secondary) solid;
 
   &:first-child {
     border-top-left-radius: 6px;
-    border-right: 1px var(--theme-primary) solid;
+    border-right: 1px var(--theme-secondary) solid;
   }
 
   &:last-child {
@@ -52,18 +52,18 @@ export const TabsTrigger = styled(Tabs.Trigger)`
   }
 
   &:hover {
-    color: var(--theme-secondary);
+    color: var(--theme-primary);
   }
 
   &:active {
-    color: var(--theme-primary);
+    color: var(--theme-secondary);
     box-shadow: inset 0 -1px 0 0 currentColor, 0 1px 0 0 currentColor;
   }
 
   &:focus {
     position: relative;
-    box-shadow: 0 0 0 1px var(--theme-primary);
-    color: var(--theme-secondary);
+    box-shadow: 0 0 0 1px var(--theme-secondary);
+    color: var(--theme-primary);
   }
 `
 
@@ -76,8 +76,8 @@ export const TabsContent = styled(Tabs.Content)`
   outline: none;
   background: linear-gradient(
     180deg,
-    var(--theme-primary) 9%,
-    var(--theme-secondary) 100%
+    var(--theme-secondary) 9%,
+    var(--theme-primary) 100%
   );
   display: flex;
   justify-content: center;

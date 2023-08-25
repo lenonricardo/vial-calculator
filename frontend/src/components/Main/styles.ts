@@ -7,5 +7,5 @@ export const Wrapper = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -53px;
+  margin-top: calc(-1 * var(--navbar-height));
 `

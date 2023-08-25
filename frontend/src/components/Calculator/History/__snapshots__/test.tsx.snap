@@ -2,7 +2,7 @@
 
 exports[`<History /> should render the component 1`] = `
 .c0 {
-  height: var(--calculator-width);
+  height: var(--primary-width);
   background: var(--secondary-operations);
   display: -webkit-box;
   display: -webkit-flex;

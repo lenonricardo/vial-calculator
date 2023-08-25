@@ -4,7 +4,7 @@ exports[`<BasicOperationPads /> should render the component 1`] = `
 .c1.c1 {
   width: var(--pad-width);
   height: var(--pad-height);
-  color: var(--font-pads);
+  color: var(--font-pads-color);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -41,21 +41,21 @@ exports[`<BasicOperationPads /> should render the component 1`] = `
 }
 
 .c2.c2 {
-  background: var(--theme-primary);
+  background: var(--theme-secondary);
   color: #fff !important;
 }
 
 .c2.c2:hover {
-  background: var(--theme-primary);
+  background: var(--theme-secondary);
 }
 
 .c3.c3 {
-  background: linear-gradient( 180deg, var(--theme-primary) 9%, var(--theme-secondary) 100% );
+  background: linear-gradient( 180deg, var(--theme-secondary) 9%, var(--theme-primary) 100% );
   color: #fff !important;
 }
 
 .c4.c4 {
-  background: var(--theme-secondary);
+  background: var(--theme-primary);
   color: #fff !important;
 }
 
@@ -64,7 +64,7 @@ exports[`<BasicOperationPads /> should render the component 1`] = `
 }
 
 .c4.c4:hover {
-  background: var(--theme-secondary);
+  background: var(--theme-primary);
 }
 
 <div

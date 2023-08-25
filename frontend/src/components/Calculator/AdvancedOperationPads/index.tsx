@@ -20,31 +20,19 @@ export default function AdvancedOperationPads({
     AdvancedOperationEnum
   )
 
-  const handleSquareRoot = () => {
-    onInput('sqrt(')
-  }
-
-  const handleExponentiation = () => {
-    onInput('^')
-  }
-
-  const handlePercentage = () => {
-    onInput('%')
-  }
-
   const handleOperationClick = (operation: string) => {
     switch (operation) {
       case AdvancedOperationEnum.ALL_CLEAR:
         onClear()
         break
       case AdvancedOperationEnum.SQUARE_ROOT:
-        handleSquareRoot()
+        onInput('sqrt(')
         break
       case AdvancedOperationEnum.EXPONENTIATION:
-        handleExponentiation()
+        onInput('^')
         break
       case AdvancedOperationEnum.PERCENTAGE:
-        handlePercentage()
+        onInput('%')
     }
   }
 

@@ -4,7 +4,7 @@ exports[`<NumberPads /> should render the component 1`] = `
 .c2.c2 {
   width: var(--pad-width);
   height: var(--pad-height);
-  color: var(--font-pads);
+  color: var(--font-pads-color);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -58,8 +58,8 @@ exports[`<NumberPads /> should render the component 1`] = `
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(var(--pad-width),1fr));
   grid-template-rows: repeat(auto-fill,minmax(var(--pad-width),1fr));
-  width: calc(450px - var(--pad-width) - var(--pad-width));
-  max-height: calc(450px - var(--pad-width));
+  width: calc(var(--primary-width) - var(--pad-width) - var(--pad-width));
+  max-height: calc(var(--primary-width) - var(--pad-width));
 }
 
 .c4.c4 {

@@ -5,7 +5,7 @@ export const Pad = styled(Button)`
   && {
     width: var(--pad-width);
     height: var(--pad-height);
-    color: var(--font-pads);
+    color: var(--font-pads-color);
     display: flex;
     font-size: var(--default-font-size);
     align-items: center;
@@ -36,8 +36,8 @@ export const Pads = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--pad-width), 1fr));
   grid-template-rows: repeat(auto-fill, minmax(var(--pad-width), 1fr));
-  width: calc(450px - var(--pad-width) - var(--pad-width));
-  max-height: calc(450px - var(--pad-width));
+  width: calc(var(--primary-width) - var(--pad-width) - var(--pad-width));
+  max-height: calc(var(--primary-width) - var(--pad-width));
 `
 
 export const DoublePad = styled(Pad)`

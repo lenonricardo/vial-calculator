@@ -5,7 +5,7 @@ import { KeyboardArrowDown } from '@mui/icons-material'
 
 export const Wrapper = styled.div`
   width: 100%;
-  height: 53px;
+  height: var(----navbar-height);
   background-color: var(--theme-background);
   display: flex;
   justify-content: space-between;
@@ -31,15 +31,15 @@ export const SignIn = styled.div`
   align-items: center;
   justify-content: space-evenly;
   padding: 5px;
-  border: var(--font-pads) 2px solid;
+  border: var(--font-pads-color) 2px solid;
   border-radius: 1.5rem;
   font-size: 15px;
   cursor: pointer;
-  color: var(--font-result);
+  color: var(--font-primary-color);
   font-weight: bold;
 
   &:hover {
-    background: var(--theme-primary);
+    background: var(--theme-secondary);
   }
 `
 
@@ -50,7 +50,7 @@ export const CurrentUser = styled.div`
   padding: 5px;
   font-size: 15px;
   cursor: pointer;
-  color: var(--font-result);
+  color: var(--font-primary-color);
   font-weight: bold;
   white-space: nowrap;
 `

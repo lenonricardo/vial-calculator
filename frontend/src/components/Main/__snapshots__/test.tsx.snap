@@ -2,7 +2,7 @@
 
 exports[`<Main /> should render the component 1`] = `
 .c2 {
-  width: var(--calculator-width);
+  width: var(--primary-width);
   border-radius: 1.5rem 1.5rem 0 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -24,12 +24,12 @@ exports[`<Main /> should render the component 1`] = `
 .c6.c6 {
   font-size: var(--default-font-size);
   margin-right: 10px;
-  color: var(--theme-primary);
+  color: var(--theme-secondary);
   cursor: pointer;
 }
 
 .c5 {
-  color: var(--font-result);
+  color: var(--font-primary-color);
   font-size: var(--result-font-size);
   margin-right: 10px;
   white-space: nowrap;
@@ -57,14 +57,14 @@ exports[`<Main /> should render the component 1`] = `
 .c4.c4 {
   font-size: var(--default-font-size);
   margin-right: 10px;
-  color: var(--theme-primary);
+  color: var(--theme-secondary);
   cursor: pointer;
 }
 
 .c8.c8 {
   width: var(--pad-width);
   height: var(--pad-height);
-  color: var(--font-pads);
+  color: var(--font-pads-color);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -118,8 +118,8 @@ exports[`<Main /> should render the component 1`] = `
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(var(--pad-width),1fr));
   grid-template-rows: repeat(auto-fill,minmax(var(--pad-width),1fr));
-  width: calc(450px - var(--pad-width) - var(--pad-width));
-  max-height: calc(450px - var(--pad-width));
+  width: calc(var(--primary-width) - var(--pad-width) - var(--pad-width));
+  max-height: calc(var(--primary-width) - var(--pad-width));
 }
 
 .c14.c14 {
@@ -137,21 +137,21 @@ exports[`<Main /> should render the component 1`] = `
 }
 
 .c18.c18 {
-  background: var(--theme-primary);
+  background: var(--theme-secondary);
   color: #fff !important;
 }
 
 .c18.c18:hover {
-  background: var(--theme-primary);
+  background: var(--theme-secondary);
 }
 
 .c19.c19 {
-  background: linear-gradient( 180deg, var(--theme-primary) 9%, var(--theme-secondary) 100% );
+  background: linear-gradient( 180deg, var(--theme-secondary) 9%, var(--theme-primary) 100% );
   color: #fff !important;
 }
 
 .c20.c20 {
-  background: var(--theme-secondary);
+  background: var(--theme-primary);
   color: #fff !important;
 }
 
@@ -160,18 +160,18 @@ exports[`<Main /> should render the component 1`] = `
 }
 
 .c20.c20:hover {
-  background: var(--theme-secondary);
+  background: var(--theme-primary);
 }
 
 .c1 {
-  width: var(--calculator-width);
+  width: var(--primary-width);
   background-color: #fff;
   border-radius: 1.5rem;
   box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
 }
 
 .c10 {
-  width: var(--calculator-width);
+  width: var(--primary-width);
   border-radius: 0 0 1.5rem 1.5rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -242,7 +242,7 @@ exports[`<Main /> should render the component 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-top: -53px;
+  margin-top: calc(-1 * var(--navbar-height));
 }
 
 <main

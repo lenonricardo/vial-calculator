@@ -8,11 +8,11 @@ export const Wrapper = styled.div`
 
 export const PrimaryPad = styled(Pad)`
   && {
-    background: var(--theme-primary);
+    background: var(--theme-secondary);
     color: #fff !important;
 
     &:hover {
-      background: var(--theme-primary);
+      background: var(--theme-secondary);
     }
   }
 `
@@ -21,8 +21,8 @@ export const PrimaryGradientPad = styled(Pad)`
   && {
     background: linear-gradient(
       180deg,
-      var(--theme-primary) 9%,
-      var(--theme-secondary) 100%
+      var(--theme-secondary) 9%,
+      var(--theme-primary) 100%
     );
     color: #fff !important;
   }
@@ -30,7 +30,7 @@ export const PrimaryGradientPad = styled(Pad)`
 
 export const SecondaryGradientPad = styled(Pad)`
   && {
-    background: var(--theme-secondary);
+    background: var(--theme-primary);
     color: #fff !important;
 
     &:last-child {
@@ -38,7 +38,7 @@ export const SecondaryGradientPad = styled(Pad)`
     }
 
     &:hover {
-      background: var(--theme-secondary);
+      background: var(--theme-primary);
     }
   }
 `
