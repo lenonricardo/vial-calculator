@@ -6,10 +6,12 @@ import { Wrapper, PadWrapper } from './styles'
 import { evaluate } from 'mathjs'
 import MemoryPads from './MemoryPads'
 import AdvancedOperationPads from './AdvancedOperationPads'
+import History from './History'
 
 const Calculator = () => {
   const [result, setResult] = useState<string>('')
   const [reset, setReset] = useState<boolean>(false)
+  const [showHistory, setShowHistory] = useState<boolean>(false)
 
   const handleInput = (input: string) => {
     if (reset) {
@@ -71,7 +73,7 @@ const Calculator = () => {
       history = JSON.parse(storedHistory)
     }
 
-    history.push({
+    history.unshift({
       total: evaluatedResult,
       expression: result
     })
@@ -83,22 +85,32 @@ const Calculator = () => {
 
   return (
     <Wrapper>
-      <Display result={result} onCancelEntry={handleCancelEntry} />
+      <Display
+        result={result}
+        onCancelEntry={handleCancelEntry}
+        onShowHistory={() => setShowHistory(!showHistory)}
+      />
 
-      <AdvancedOperationPads onInput={handleInput} onClear={handleClear} />
+      {!showHistory ? (
+        <>
+          <AdvancedOperationPads onInput={handleInput} onClear={handleClear} />
 
-      <PadWrapper>
-        <NumberPads onInput={handleInput} />
-        <MemoryPads
-          result={result}
-          onResultChange={handleInput}
-          onReset={handleReset}
-        />
-        <BasicOperationPads
-          onInput={handleOperationInput}
-          onEquals={handleEquals}
-        />
-      </PadWrapper>
+          <PadWrapper>
+            <NumberPads onInput={handleInput} />
+            <MemoryPads
+              result={result}
+              onResultChange={handleInput}
+              onReset={handleReset}
+            />
+            <BasicOperationPads
+              onInput={handleOperationInput}
+              onEquals={handleEquals}
+            />
+          </PadWrapper>
+        </>
+      ) : (
+        <History/>
+      )}
     </Wrapper>
   )
 }
