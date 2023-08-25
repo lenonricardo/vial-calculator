@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<BasicOperationPads /> should render the component 1`] = `
-.c1 {
+.c1.c1 {
   width: var(--pad-width);
   height: var(--pad-height);
   color: var(--font-pads);
@@ -23,6 +23,11 @@ exports[`<BasicOperationPads /> should render the component 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  border-radius: 0;
+}
+
+.c1.c1:hover {
+  background-color: #fff;
 }
 
 .c0 {
@@ -35,52 +40,85 @@ exports[`<BasicOperationPads /> should render the component 1`] = `
   flex-direction: column;
 }
 
-.c2 {
+.c2.c2 {
   background: var(--theme-primary);
   color: #fff !important;
 }
 
-.c3 {
+.c2.c2:hover {
+  background: var(--theme-primary);
+}
+
+.c3.c3 {
   background: linear-gradient( 180deg, var(--theme-primary) 9%, var(--theme-secondary) 100% );
   color: #fff !important;
 }
 
-.c4 {
+.c4.c4 {
   background: var(--theme-secondary);
   color: #fff !important;
 }
 
-.c4:last-child {
+.c4.c4:last-child {
   border-radius: 0 0 1.5rem 0;
+}
+
+.c4.c4:hover {
+  background: var(--theme-secondary);
 }
 
 <div
   class="c0"
 >
-  <div
-    class="c1 c2"
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c1 c2 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+    tabindex="0"
+    type="button"
   >
     /
-  </div>
-  <div
-    class="c1 c3"
+    <span
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </button>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c1 c3 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+    tabindex="0"
+    type="button"
   >
     *
-  </div>
-  <div
-    class="c1 c4"
+    <span
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </button>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c1 c4 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+    tabindex="0"
+    type="button"
   >
     -
-  </div>
-  <div
-    class="c1 c4"
+    <span
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </button>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c1 c4 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+    tabindex="0"
+    type="button"
   >
     +
-  </div>
-  <div
-    class="c1 c4"
+    <span
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </button>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c1 c4 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+    tabindex="0"
+    type="button"
   >
     =
-  </div>
+    <span
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </button>
 </div>
 `;

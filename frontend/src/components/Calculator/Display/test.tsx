@@ -4,7 +4,16 @@ import Display from '.'
 
 describe('<Display />', () => {
   it('should render the component', () => {
-    const { container } = render(<Display result="123" />)
+    const onCancelEntry = jest.fn()
+    const onShowHistory = jest.fn()
+
+    const { container } = render(
+      <Display
+        result="123"
+        onCancelEntry={onCancelEntry}
+        onShowHistory={onShowHistory}
+      />
+    )
 
     expect(container.firstChild).toMatchSnapshot()
   })

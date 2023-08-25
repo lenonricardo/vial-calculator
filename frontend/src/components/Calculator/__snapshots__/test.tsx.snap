@@ -3,7 +3,6 @@
 exports[`<Calculator /> should render the component 1`] = `
 .c1 {
   width: var(--calculator-width);
-  height: var(--calculator-height);
   border-radius: 1.5rem 1.5rem 0 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -22,7 +21,7 @@ exports[`<Calculator /> should render the component 1`] = `
   flex-direction: column;
 }
 
-.c5 {
+.c5.c5 {
   font-size: var(--default-font-size);
   margin-right: 10px;
   color: var(--theme-primary);
@@ -33,6 +32,10 @@ exports[`<Calculator /> should render the component 1`] = `
   color: var(--font-result);
   font-size: var(--result-font-size);
   margin-right: 10px;
+  white-space: nowrap;
+  overflow-x: auto;
+  width: 430px;
+  text-align: right;
 }
 
 .c2 {
@@ -51,14 +54,14 @@ exports[`<Calculator /> should render the component 1`] = `
   padding: 10px;
 }
 
-.c3 {
+.c3.c3 {
   font-size: var(--default-font-size);
   margin-right: 10px;
   color: var(--theme-primary);
   cursor: pointer;
 }
 
-.c7 {
+.c7.c7 {
   width: var(--pad-width);
   height: var(--pad-height);
   color: var(--font-pads);
@@ -80,6 +83,11 @@ exports[`<Calculator /> should render the component 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  border-radius: 0;
+}
+
+.c7.c7:hover {
+  background-color: #fff;
 }
 
 .c10 {
@@ -100,6 +108,7 @@ exports[`<Calculator /> should render the component 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  z-index: 2;
 }
 
 .c11 {
@@ -113,7 +122,7 @@ exports[`<Calculator /> should render the component 1`] = `
   max-height: calc(450px - var(--pad-width));
 }
 
-.c13 {
+.c13.c13 {
   width: calc(var(--pad-width) * 2);
 }
 
@@ -127,23 +136,31 @@ exports[`<Calculator /> should render the component 1`] = `
   flex-direction: column;
 }
 
-.c17 {
+.c17.c17 {
   background: var(--theme-primary);
   color: #fff !important;
 }
 
-.c18 {
+.c17.c17:hover {
+  background: var(--theme-primary);
+}
+
+.c18.c18 {
   background: linear-gradient( 180deg, var(--theme-primary) 9%, var(--theme-secondary) 100% );
   color: #fff !important;
 }
 
-.c19 {
+.c19.c19 {
   background: var(--theme-secondary);
   color: #fff !important;
 }
 
-.c19:last-child {
+.c19.c19:last-child {
   border-radius: 0 0 1.5rem 0;
+}
+
+.c19.c19:hover {
+  background: var(--theme-secondary);
 }
 
 .c0 {
@@ -157,9 +174,9 @@ exports[`<Calculator /> should render the component 1`] = `
   width: var(--calculator-width);
   border-radius: 0 0 1.5rem 1.5rem;
   display: -webkit-box;
-  display: -webkit-f;
-  display: -ms-fbox;
-  display: f;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -178,8 +195,12 @@ exports[`<Calculator /> should render the component 1`] = `
   transform: translateY(var(--pad-width));
 }
 
-.c15 {
-  background-color: var(--secondary-operations);
+.c15.c15 {
+  background: var(--secondary-operations);
+}
+
+.c15.c15:hover {
+  background: var(--secondary-operations);
 }
 
 .c6 {
@@ -194,9 +215,14 @@ exports[`<Calculator /> should render the component 1`] = `
   -ms-transform: translateY(var(--pad-width));
   transform: translateY(var(--pad-width));
   margin-top: calc(-1 * var(--pad-width));
+  margin-right: var(--pad-width);
 }
 
-.c8 {
+.c8.c8 {
+  background-color: var(--secondary-operations);
+}
+
+.c8.c8:hover {
   background-color: var(--secondary-operations);
 }
 
@@ -241,26 +267,46 @@ exports[`<Calculator /> should render the component 1`] = `
   <div
     class="c6"
   >
-    <div
-      class="c7 c8"
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c7 c8 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
     >
       AC
-    </div>
-    <div
-      class="c7 c8"
+      <span
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </button>
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c7 c8 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
     >
       √
-    </div>
-    <div
-      class="c7 c8"
+      <span
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </button>
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c7 c8 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
     >
       xʸ
-    </div>
-    <div
-      class="c7 c8"
+      <span
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </button>
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c7 c8 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
     >
       %
-    </div>
+      <span
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </button>
   </div>
   <div
     class="c9"
@@ -271,119 +317,219 @@ exports[`<Calculator /> should render the component 1`] = `
       <div
         class="c11"
       >
-        <div
-          class="c7"
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c7 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
         >
           7
-        </div>
-        <div
-          class="c7"
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c7 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
         >
           8
-        </div>
-        <div
-          class="c7"
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c7 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
         >
           9
-        </div>
-        <div
-          class="c7"
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c7 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
         >
           4
-        </div>
-        <div
-          class="c7"
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c7 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
         >
           5
-        </div>
-        <div
-          class="c7"
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c7 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
         >
           6
-        </div>
-        <div
-          class="c7"
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c7 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
         >
           1
-        </div>
-        <div
-          class="c7"
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c7 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
         >
           2
-        </div>
-        <div
-          class="c7"
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c7 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
         >
           3
-        </div>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
       </div>
       <div
         class="c12"
       >
-        <div
-          class="c7 c13"
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c7 c13 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
         >
           0
-        </div>
-        <div
-          class="c7"
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c7 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
         >
           .
-        </div>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
       </div>
     </div>
     <div
       class="c14"
     >
-      <div
-        class="c7 c15"
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c7 c15 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+        tabindex="0"
+        type="button"
       >
         M+
-      </div>
-      <div
-        class="c7 c15"
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c7 c15 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+        tabindex="0"
+        type="button"
       >
         M-
-      </div>
-      <div
-        class="c7 c15"
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c7 c15 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+        tabindex="0"
+        type="button"
       >
         MR
-      </div>
-      <div
-        class="c7 c15"
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c7 c15 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+        tabindex="0"
+        type="button"
       >
         MC
-      </div>
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
     </div>
     <div
       class="c16"
     >
-      <div
-        class="c7 c17"
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c7 c17 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+        tabindex="0"
+        type="button"
       >
         /
-      </div>
-      <div
-        class="c7 c18"
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c7 c18 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+        tabindex="0"
+        type="button"
       >
         *
-      </div>
-      <div
-        class="c7 c19"
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c7 c19 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+        tabindex="0"
+        type="button"
       >
         -
-      </div>
-      <div
-        class="c7 c19"
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c7 c19 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+        tabindex="0"
+        type="button"
       >
         +
-      </div>
-      <div
-        class="c7 c19"
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium c7 c19 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+        tabindex="0"
+        type="button"
       >
         =
-      </div>
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
     </div>
   </div>
 </div>

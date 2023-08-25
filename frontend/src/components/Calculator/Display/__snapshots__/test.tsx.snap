@@ -3,7 +3,6 @@
 exports[`<Display /> should render the component 1`] = `
 .c0 {
   width: var(--calculator-width);
-  height: var(--calculator-height);
   border-radius: 1.5rem 1.5rem 0 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -22,7 +21,7 @@ exports[`<Display /> should render the component 1`] = `
   flex-direction: column;
 }
 
-.c4 {
+.c4.c4 {
   font-size: var(--default-font-size);
   margin-right: 10px;
   color: var(--theme-primary);
@@ -33,6 +32,10 @@ exports[`<Display /> should render the component 1`] = `
   color: var(--font-result);
   font-size: var(--result-font-size);
   margin-right: 10px;
+  white-space: nowrap;
+  overflow-x: auto;
+  width: 430px;
+  text-align: right;
 }
 
 .c1 {
@@ -51,7 +54,7 @@ exports[`<Display /> should render the component 1`] = `
   padding: 10px;
 }
 
-.c2 {
+.c2.c2 {
   font-size: var(--default-font-size);
   margin-right: 10px;
   color: var(--theme-primary);
