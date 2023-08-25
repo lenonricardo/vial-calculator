@@ -53,8 +53,6 @@ export const CurrentUser = styled.div`
   color: var(--font-result);
   font-weight: bold;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 `
 
 export const ArrowDown = styled(KeyboardArrowDown)`

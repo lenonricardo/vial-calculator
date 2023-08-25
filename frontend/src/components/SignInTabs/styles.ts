@@ -9,6 +9,7 @@ export const Wrapper = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: -64px;
 `
 
 export const TabsRoot = styled(Tabs.Root)`
