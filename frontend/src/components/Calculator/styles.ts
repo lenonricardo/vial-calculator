@@ -10,6 +10,6 @@ export const Wrapper = styled.div`
 export const PadWrapper = styled.div`
   width: var(--calculator-width);
   border-radius: 0 0 1.5rem 1.5rem;
-  display: f;
+  display: flex;
   flex-direction: row;
 `

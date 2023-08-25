@@ -36,7 +36,7 @@ const GlobalStyles = createGlobalStyle`
     --pad-width: 90px;
     --pad-height: 90px;
 
-    --memory-pad-font-size: 25px;
+    --memory-pad-font-size: 18px;
     --default-font-size: 35px;
     --result-font-size: 52px;
 
