@@ -1,3 +1,4 @@
+import Layout from 'components/Layout'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 
@@ -18,7 +19,9 @@ function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <GlobalStyles />
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   )
 }

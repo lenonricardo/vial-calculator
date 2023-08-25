@@ -1,50 +1,78 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Container from '@mui/material/Container';
+import React, { useEffect, useState } from 'react';
 import Avatar from '@mui/material/Avatar';
 import Link from 'next/link'
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { CustomToolbar } from './styles';
+import { Wrapper, SignIn, Img, SignInWrapper } from './styles';
 import Cookies from 'js-cookie';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 
-function ResponsiveAppBar() {
-  const theme = createTheme({
-    palette: {
-      primary: {
-        main: '#E7EAEC',
-      },
-    },
-  });
+export default function NavBar() {
+  const [ isAuthenticated, setIsAuthenticated ] = useState<boolean>(false)
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
-  const jwtToken = () => {
-    const jwtToken = Cookies.get('jwt');
-    console.log(jwtToken)
+  useEffect(() => {
+    setIsAuthenticated(!!getJwtToken())
+  }, [])
 
-    return !!jwtToken
+  const getJwtToken = () => {
+      return Cookies.get('jwt');
   }
 
-  const path = () => {
-    return jwtToken() ? '' : '/signin'
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
   }
+
+  const handleClose = () => {
+    setAnchorEl(null);
+    setIsAuthenticated(false)
+    Cookies.remove('jwt')
+  }
+
+  const open = Boolean(anchorEl);
 
   return (
-    <ThemeProvider theme={theme}>
-        <AppBar position="static">
-          <Container maxWidth="xl">
-            <CustomToolbar>
-              <Link href={path()} passHref>
-                <IconButton>
-                  <Avatar  />
-                  {!jwtToken() && 'SIGN IN' }
-                </IconButton>
-              </Link>
-            </CustomToolbar>
-          </Container>
-        </AppBar>
+    <Wrapper>
+      <Link href="/" passHref>
+        <Img
+          src="/img/logo.svg"
+          alt="Navbar Logo"
+          width={100}
+          height={50}
+        />
+      </Link>
 
-    </ThemeProvider>
+      <Link href="/signin" passHref>
+        <SignInWrapper>
+          {!isAuthenticated ?
+            <SignIn>
+                <Avatar sx={{ width: 24, height: 24 }}  />
+                <span>Sign In</span>
+            </SignIn>
+            :
+            <div>
+
+              <SignIn onClick={handleClick}>
+                Howdy, Lenon!
+              </SignIn>
+              <Menu
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                anchorOrigin={{
+                  vertical: 'bottom',
+                  horizontal: 'left',
+                }}
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'left',
+                }}
+              >
+                <MenuItem sx={{width: 100}} onClick={handleClose}>Logout</MenuItem>
+              </Menu>
+            </div>
+          }
+        </SignInWrapper>
+      </Link>
+    </Wrapper>
   );
 }
-export default ResponsiveAppBar;

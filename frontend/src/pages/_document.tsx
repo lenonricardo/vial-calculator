@@ -1,4 +1,3 @@
-import Navbar from 'components/NavBar'
 import Document, {
   Html,
   Head,
@@ -42,7 +41,6 @@ export default class MyDocument extends Document {
       <Html lang="pt-BR">
         <Head />
         <body>
-          <Navbar/>
           <Main />
           <NextScript />
         </body>
