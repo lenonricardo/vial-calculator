@@ -5,7 +5,7 @@ import { KeyboardArrowDown } from '@mui/icons-material'
 
 export const Wrapper = styled.div`
   width: 100%;
-  height: 64px;
+  height: 53px;
   background-color: var(--theme-background);
   display: flex;
   justify-content: space-between;

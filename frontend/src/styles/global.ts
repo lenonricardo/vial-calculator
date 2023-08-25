@@ -13,6 +13,7 @@ const GlobalStyles = createGlobalStyle`
 
   html, body, #__next {
     height: 100%;
+    background: var(--theme-background);
   }
 
   body {
