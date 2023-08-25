@@ -30,9 +30,11 @@ export const Total = styled.span`
 `
 
 export const CustomDeleteForeverIcon = styled(DeleteForeverIcon)`
-  font-size: var(--default-font-size);
-  color: var(--font-primary);
-  cursor: pointer;
-  margin-right: 1.5rem;
-  margin-bottom: 1.5rem;
+  && {
+    font-size: var(--default-font-size);
+    color: var(--font-primary);
+    cursor: pointer;
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 `

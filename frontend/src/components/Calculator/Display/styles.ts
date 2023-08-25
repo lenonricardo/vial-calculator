@@ -12,10 +12,12 @@ export const Wrapper = styled.div`
 `
 
 export const CustomBackspaceIcon = styled(BackspaceIcon)`
-  font-size: var(--default-font-size);
-  margin-right: 10px;
-  color: var(--theme-primary);
-  cursor: pointer;
+  && {
+    font-size: var(--default-font-size);
+    margin-right: 10px;
+    color: var(--theme-primary);
+    cursor: pointer;
+  }
 `
 
 export const Result = styled.div`
@@ -37,8 +39,10 @@ export const Header = styled.div`
 `
 
 export const CustomHistoryIcon = styled(HistoryIcon)`
-  font-size: var(--default-font-size);
-  margin-right: 10px;
-  color: var(--theme-primary);
-  cursor: pointer;
+  && {
+    font-size: var(--default-font-size);
+    margin-right: 10px;
+    color: var(--theme-primary);
+    cursor: pointer;
+  }
 `

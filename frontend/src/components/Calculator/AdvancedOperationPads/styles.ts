@@ -10,9 +10,11 @@ export const TopPadWrapper = styled.div`
 `
 
 export const TopPad = styled(Pad)`
-  background-color: var(--secondary-operations);
-
-  &:hover {
+  && {
     background-color: var(--secondary-operations);
+
+    &:hover {
+      background-color: var(--secondary-operations);
+    }
   }
 `

@@ -89,11 +89,15 @@ export const TabsContent = styled(Tabs.Content)`
 `
 
 export const AccountIcon = styled(AccountCircleRounded)`
-  font-size: 90px;
-  color: white;
+  && {
+    font-size: 90px;
+    color: white;
+  }
 `
 
 export const RegisterIcon = styled(PersonAdd)`
-  font-size: 90px;
-  color: white;
+  && {
+    font-size: 90px;
+    color: white;
+  }
 `

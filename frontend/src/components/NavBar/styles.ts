@@ -58,5 +58,7 @@ export const CurrentUser = styled.div`
 `
 
 export const ArrowDown = styled(KeyboardArrowDown)`
-  font-size: 25px;
+  && {
+    font-size: 25px;
+  }
 `

@@ -7,9 +7,11 @@ export const MemoryWrapper = styled.div`
   transform: translateY(var(--pad-width));
 `
 export const SecondaryPad = styled(Pad)`
-  background: var(--secondary-operations);
-
-  &:hover {
+  && {
     background: var(--secondary-operations);
+
+    &:hover {
+      background: var(--secondary-operations);
+    }
   }
 `

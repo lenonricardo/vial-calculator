@@ -2,19 +2,21 @@ import styled from 'styled-components'
 import Button from '@mui/material/Button'
 
 export const Pad = styled(Button)`
-  width: var(--pad-width);
-  height: var(--pad-height);
-  color: var(--font-pads);
-  display: flex;
-  font-size: var(--default-font-size);
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  user-select: none;
-  border-radius: 0;
+  && {
+    width: var(--pad-width);
+    height: var(--pad-height);
+    color: var(--font-pads);
+    display: flex;
+    font-size: var(--default-font-size);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 0;
 
-  &:hover {
-    background-color: #fff;
+    &:hover {
+      background-color: #fff;
+    }
   }
 `
 
@@ -39,5 +41,7 @@ export const Pads = styled.div`
 `
 
 export const DoublePad = styled(Pad)`
-  width: calc(var(--pad-width) * 2);
+  && {
+    width: calc(var(--pad-width) * 2);
+  }
 `
