@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import * as Tabs from '@radix-ui/react-tabs';
-import { AccountCircleRounded, PersonAdd } from '@mui/icons-material';
+import * as Tabs from '@radix-ui/react-tabs'
+import { AccountCircleRounded, PersonAdd } from '@mui/icons-material'
 
 export const Wrapper = styled.main`
   background-color: var(--theme-background);
@@ -9,7 +9,6 @@ export const Wrapper = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -64px;
 `
 
 export const TabsRoot = styled(Tabs.Root)`
@@ -42,10 +41,9 @@ export const TabsTrigger = styled(Tabs.Trigger)`
   cursor: pointer;
   border-bottom: 1px var(--theme-primary) solid;
 
-
   &:first-child {
     border-top-left-radius: 6px;
-    border-right: 1px var(--theme-primary) solid
+    border-right: 1px var(--theme-primary) solid;
   }
 
   &:last-child {
@@ -64,9 +62,8 @@ export const TabsTrigger = styled(Tabs.Trigger)`
   &:focus {
     position: relative;
     box-shadow: 0 0 0 1px var(--theme-primary);
-    color: var(--theme-secondary)
+    color: var(--theme-secondary);
   }
-
 `
 
 export const TabsContent = styled(Tabs.Content)`
@@ -100,12 +97,3 @@ export const RegisterIcon = styled(PersonAdd)`
   font-size: 90px;
   color: white;
 `
-
-
-
-
-
-
-
-
-

@@ -1,19 +1,12 @@
-import {
-  CustomDeleteForeverIcon,
-  Expression,
-  Total,
-  Wrapper,
-} from './styles'
+import { CustomDeleteForeverIcon, Expression, Total, Wrapper } from './styles'
 import React, { useState, useEffect } from 'react'
 
-
 interface History {
-  expression: string,
-  total: string,
+  expression: string
+  total: string
 }
 
 export default function History() {
-
   const [history, setHistory] = useState<Array<History>>([])
 
   useEffect(() => {
@@ -46,10 +39,7 @@ export default function History() {
         ))}
       </div>
 
-      {
-        !!history.length &&
-        <CustomDeleteForeverIcon onClick={clearHistory}/>
-      }
+      {!!history.length && <CustomDeleteForeverIcon onClick={clearHistory} />}
     </Wrapper>
   )
 }

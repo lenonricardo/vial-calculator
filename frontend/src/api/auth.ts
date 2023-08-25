@@ -2,8 +2,8 @@ import { AxiosResponse } from 'axios'
 import axios from '../services/api'
 
 export interface LoginPayload {
-  email: string,
-  password: string,
+  email: string
+  password: string
 }
 
 export interface LoginResponse {
@@ -11,8 +11,8 @@ export interface LoginResponse {
 }
 
 export interface RegisterResponse {
-  id: number,
-  email: string,
+  id: number
+  email: string
 }
 
 export default {

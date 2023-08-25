@@ -1,4 +1,5 @@
 import Layout from 'components/Layout'
+import { CookieProvider } from 'context/CookieContext'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 
@@ -19,9 +20,11 @@ function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <GlobalStyles />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <CookieProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </CookieProvider>
     </>
   )
 }

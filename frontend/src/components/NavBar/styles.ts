@@ -1,5 +1,7 @@
 import styled from 'styled-components'
-import Image from 'next/image';
+import Image from 'next/image'
+import Link from 'next/link'
+import { KeyboardArrowDown } from '@mui/icons-material'
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -13,6 +15,10 @@ export const Wrapper = styled.div`
 
 export const Img = styled(Image)`
   cursor: pointer;
+`
+
+export const CustomLink = styled(Link)`
+  text-decoration: none;
 `
 
 export const SignInWrapper = styled.div`
@@ -32,10 +38,25 @@ export const SignIn = styled.div`
   color: var(--font-result);
   font-weight: bold;
 
-  &:hover{
+  &:hover {
     background: var(--theme-primary);
   }
 `
 
+export const CurrentUser = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  color: var(--font-result);
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`
 
-
+export const ArrowDown = styled(KeyboardArrowDown)`
+  font-size: 25px;
+`

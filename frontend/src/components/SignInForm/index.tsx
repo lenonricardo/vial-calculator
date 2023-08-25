@@ -1,30 +1,33 @@
 import React, { useState } from 'react'
-import { TextField, Button, CircularProgress } from '@mui/material';
-import { Alert } from '@mui/material';
-import { LoginPayload, LoginResponse } from 'api/auth';
-import axios, { AxiosResponse } from 'axios';
+import { TextField, Button, CircularProgress } from '@mui/material'
+import { Alert } from '@mui/material'
+import { LoginPayload, LoginResponse } from 'api/auth'
+import axios, { AxiosResponse } from 'axios'
 import { useRouter } from 'next/router'
-import Cookies from 'js-cookie';
+import Cookies from 'js-cookie'
+import { useCookie } from '../../context/CookieContext'
 
 interface FormProps {
-  action: string,
-  message: string,
-  request: (params: LoginPayload)  => Promise<AxiosResponse>;
+  action: string
+  message: string
+  request: (params: LoginPayload) => Promise<AxiosResponse>
 }
 
 export default function SignInForm({ action, request, message }: FormProps) {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [isLoading, setLoading] = useState(false);
-  const [error, setError] = useState('');
-  const [successMessage, setSuccessMessage] = useState('');
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [isLoading, setLoading] = useState(false)
+  const [error, setError] = useState('')
+  const [successMessage, setSuccessMessage] = useState('')
+  const { setCookieValue } = useCookie()
+
   const router = useRouter()
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    e.preventDefault()
 
-    setLoading(true);
-    setError('');
+    setLoading(true)
+    setError('')
 
     try {
       const response = await request({
@@ -32,7 +35,7 @@ export default function SignInForm({ action, request, message }: FormProps) {
         password
       })
 
-      const { data } = response;
+      const { data } = response
 
       setSuccessMessage(message)
       resetForm()
@@ -43,18 +46,20 @@ export default function SignInForm({ action, request, message }: FormProps) {
       }
     } catch (error) {
       if (axios.isAxiosError(error)) {
-        const errorMessage = error?.response?.data?.message;
-        setError(errorMessage || 'An error occurred with the request.');
+        const errorMessage = error?.response?.data?.message
+        setError(errorMessage || 'An error occurred with the request.')
       } else {
-        setError('An error occurred. Please try again later.');
+        setError('An error occurred. Please try again later.')
       }
     }
 
-    setLoading(false);
-  };
+    setLoading(false)
+  }
 
   const setCookies = (response: LoginResponse) => {
     Cookies.set('jwt', response.access_token)
+    setCookieValue(response.access_token)
+    localStorage.setItem('user', email)
   }
 
   const resetForm = () => {
@@ -84,8 +89,16 @@ export default function SignInForm({ action, request, message }: FormProps) {
         margin="normal"
         variant="standard"
       />
-      {error && <Alert severity="error" style={{ marginTop: '1rem' }}>{error}</Alert>}
-      {successMessage && <Alert severity="success" style={{ marginTop: '1rem' }}>{successMessage}</Alert>}
+      {error && (
+        <Alert severity="error" style={{ marginTop: '1rem' }}>
+          {error}
+        </Alert>
+      )}
+      {successMessage && (
+        <Alert severity="success" style={{ marginTop: '1rem' }}>
+          {successMessage}
+        </Alert>
+      )}
       <Button
         type="submit"
         variant="outlined"
@@ -95,5 +108,5 @@ export default function SignInForm({ action, request, message }: FormProps) {
         {isLoading ? <CircularProgress size={24} /> : action}
       </Button>
     </form>
-  );
+  )
 }

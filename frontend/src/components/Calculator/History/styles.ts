@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever'
 
 export const Wrapper = styled.div`
   height: var(--calculator-width);
@@ -24,17 +24,15 @@ export const Total = styled.span`
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 0 1.5rem  2.5rem 0 ;
+  padding: 0 1.5rem 2.5rem 0;
   font-size: var(--default-font-size);
   color: var(--font-primary);
 `
 
 export const CustomDeleteForeverIcon = styled(DeleteForeverIcon)`
   font-size: var(--default-font-size);
-  color: var(--font-primary);;
+  color: var(--font-primary);
   cursor: pointer;
   margin-right: 1.5rem;
   margin-bottom: 1.5rem;
-
 `
-

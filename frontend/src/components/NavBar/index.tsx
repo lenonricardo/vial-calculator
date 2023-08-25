@@ -1,78 +1,95 @@
-import React, { useEffect, useState } from 'react';
-import Avatar from '@mui/material/Avatar';
+import React, { useEffect, useState } from 'react'
+import Avatar from '@mui/material/Avatar'
 import Link from 'next/link'
-import { Wrapper, SignIn, Img, SignInWrapper } from './styles';
-import Cookies from 'js-cookie';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
+import {
+  Wrapper,
+  SignIn,
+  Img,
+  SignInWrapper,
+  CustomLink,
+  CurrentUser,
+  ArrowDown
+} from './styles'
+import Cookies from 'js-cookie'
+import Menu from '@mui/material/Menu'
+import MenuItem from '@mui/material/MenuItem'
+import { useCookie } from '../../context/CookieContext'
 
 export default function NavBar() {
-  const [ isAuthenticated, setIsAuthenticated ] = useState<boolean>(false)
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false)
+  const [userEmail, setuserEmail] = useState<string | null>('')
+  const [signInRoute, setSignInRoute] = useState<string>('/signin')
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
+  const { cookieValue } = useCookie()
 
   useEffect(() => {
-    setIsAuthenticated(!!getJwtToken())
-  }, [])
+    const hasJwtToken = getJwtToken()
+    setIsAuthenticated(!!hasJwtToken)
+    setuserEmail(localStorage.getItem('user'))
+
+    setSignInRoute(!hasJwtToken ? '/signin' : '')
+  }, [cookieValue])
 
   const getJwtToken = () => {
-      return Cookies.get('jwt');
+    return Cookies.get('jwt')
   }
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
+    setAnchorEl(event.currentTarget)
   }
 
   const handleClose = () => {
-    setAnchorEl(null);
-    setIsAuthenticated(false)
-    Cookies.remove('jwt')
+    setAnchorEl(null)
   }
 
-  const open = Boolean(anchorEl);
+  const handleLogout = () => {
+    setIsAuthenticated(false)
+    Cookies.remove('jwt')
+    setSignInRoute('/signin')
+  }
+
+  const open = Boolean(anchorEl)
 
   return (
     <Wrapper>
       <Link href="/" passHref>
-        <Img
-          src="/img/logo.svg"
-          alt="Navbar Logo"
-          width={100}
-          height={50}
-        />
+        <Img src="/img/logo.svg" alt="Navbar Logo" width={100} height={50} />
       </Link>
 
-      <Link href="/signin" passHref>
+      <CustomLink href={signInRoute} passHref>
         <SignInWrapper>
-          {!isAuthenticated ?
+          {!isAuthenticated ? (
             <SignIn>
-                <Avatar sx={{ width: 24, height: 24 }}  />
-                <span>Sign In</span>
+              <Avatar sx={{ width: 24, height: 24 }} />
+              <span>Sign In</span>
             </SignIn>
-            :
+          ) : (
             <div>
-
-              <SignIn onClick={handleClick}>
-                Howdy, Lenon!
-              </SignIn>
+              <CurrentUser onClick={handleClick}>
+                <ArrowDown></ArrowDown>
+                Hey, {userEmail}
+              </CurrentUser>
               <Menu
                 anchorEl={anchorEl}
                 open={open}
                 onClose={handleClose}
                 anchorOrigin={{
                   vertical: 'bottom',
-                  horizontal: 'left',
+                  horizontal: 'left'
                 }}
                 transformOrigin={{
                   vertical: 'top',
-                  horizontal: 'left',
+                  horizontal: 'left'
                 }}
               >
-                <MenuItem sx={{width: 100}} onClick={handleClose}>Logout</MenuItem>
+                <MenuItem sx={{ width: 100 }} onClick={handleLogout}>
+                  Logout
+                </MenuItem>
               </Menu>
             </div>
-          }
+          )}
         </SignInWrapper>
-      </Link>
+      </CustomLink>
     </Wrapper>
-  );
+  )
 }

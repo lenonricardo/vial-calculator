@@ -109,7 +109,7 @@ const Calculator = () => {
           </PadWrapper>
         </>
       ) : (
-        <History/>
+        <History />
       )}
     </Wrapper>
   )
