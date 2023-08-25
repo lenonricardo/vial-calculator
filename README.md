@@ -2,14 +2,14 @@
 ### Overview
 The project aims to create a straightforward calculator application with basic arithmetic functions. This involves building a browser-based interface using React.js and Next.js for the frontend, while utilizing a Node.js server with Nest.js for the backend. The application allows users to perform calculations adhering to the order of operations (PEMDAS) and offers authentication features for registration and login.
 
-### Backend - available on https://vialcalculator.fly.dev
+### Backend - available here: https://vialcalculator.fly.dev
 - [Nest.js](https://nestjs.com/) - A progressive Node.js framework for building efficient, reliable, and scalable server-side applications.
 - [Prisma](https://www.prisma.io/) - A modern database toolkit for TypeScript and Node.js.
 - [Passport](http://www.passportjs.org/) - A popular authentication middleware for Node.js.
 - [bcrypt](https://github.com/kelektiv/node.bcrypt.js) - A library to help you hash passwords.
 - [SQLite](https://www.sqlite.org/) - A self-contained, serverless, and zero-configuration SQL database engine.
 
-### Frontend - available on https://vial-calculator.vercel.app
+### Frontend - available here: https://vial-calculator.vercel.app
 - [React.js](https://reactjs.org/) - A JavaScript library for building user interfaces.
 - [Next.js](https://nextjs.org/) - A framework for server-rendered React applications.
 - [Emotion](https://emotion.sh/docs/introduction) - A library for writing CSS styles with JavaScript.
