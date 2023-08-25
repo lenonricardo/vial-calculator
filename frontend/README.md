@@ -15,8 +15,6 @@ This project uses lot of stuff as:
 First, run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
 ```
 
