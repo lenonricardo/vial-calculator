@@ -36,3 +36,45 @@ $ yarn run start:dev
 $ yarn run start:prod
 ```
 
+## Requests
+### Create User
+Endpoint: /user
+
+Method: POST
+
+Request Body:
+```json
+{
+    "email": "foo@bar.com",
+    "password": "foobar1234",
+}
+```
+
+Response Body (Status 201):
+```json
+{
+    "id": 1,
+    "email": "foo@bar.com",
+}
+```
+
+## Authenticate user
+Endpoint: /login
+
+Method: POST
+
+Request Body:
+```json
+{
+    "email": "foo@bar.com",,
+    "password": "foobar1234"
+}
+```
+
+Response Body (Status 200):
+```json
+{
+    "access_token": "generated JWT token"
+}
+```
+
